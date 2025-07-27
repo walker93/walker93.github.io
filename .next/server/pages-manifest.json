@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/forensic-imap-downloader": "pages/forensic-imap-downloader.html",
+  "/cell-map-designer": "pages/cell-map-designer.html",
+  "/": "pages/index.html",
+  "/instagram-takeout-parser": "pages/instagram-takeout-parser.html",
+  "/mailxaminer-html-report": "pages/mailxaminer-html-report.html",
+  "/privacy-policy": "pages/privacy-policy.html",
+  "/twrp-to-ufed": "pages/twrp-to-ufed.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
