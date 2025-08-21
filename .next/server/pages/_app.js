@@ -83,11 +83,20 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
                 style: {
-                    textAlign: "center"
+                    textAlign: "center",
+                    margin: 0
                 },
                 children: "Alex Cortinovis"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                style: {
+                    textAlign: "center",
+                    fontWeight: 400,
+                    fontSize: "1.1rem",
+                    lineHeight: 1.5,
+                    marginBottom: "10px",
+                    color: "#757575"
+                },
                 children: "Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente"
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", {

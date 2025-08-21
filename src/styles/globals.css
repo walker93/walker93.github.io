@@ -3,10 +3,17 @@ h2 {
 }
 /* Software grid & card styles */
 .software-grid {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
+    margin-top: 1.5rem;*/
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin-top: 1.5rem;
+    justify-content: center;
+
 }
 
 .software-card {
@@ -19,6 +26,8 @@ h2 {
     align-items: center;
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
+    max-width: 250px;
+    flex-basis: 250px;
 }
 .software-card:hover {
     box-shadow: 0 4px 24px rgba(0,112,243,0.13);
