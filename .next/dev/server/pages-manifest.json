@@ -2,9 +2,7 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/cell-map-designer": "pages/cell-map-designer.js",
   "/forensic-imap-downloader": "pages/forensic-imap-downloader.js",
   "/instagram-takeout-parser": "pages/instagram-takeout-parser.js",
-  "/mailxaminer-html-report": "pages/mailxaminer-html-report.js"
+  "/twrp-to-ufed": "pages/twrp-to-ufed.js"
 }

@@ -2,20 +2,14 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/_error": [
-    "static/chunks/pages/_error.js"
-  ],
-  "/cell-map-designer": [
-    "static/chunks/pages/cell-map-designer.js"
-  ],
   "/forensic-imap-downloader": [
     "static/chunks/pages/forensic-imap-downloader.js"
   ],
   "/instagram-takeout-parser": [
     "static/chunks/pages/instagram-takeout-parser.js"
   ],
-  "/mailxaminer-html-report": [
-    "static/chunks/pages/mailxaminer-html-report.js"
+  "/twrp-to-ufed": [
+    "static/chunks/pages/twrp-to-ufed.js"
   ],
   "__rewrites": {
     "afterFiles": [],

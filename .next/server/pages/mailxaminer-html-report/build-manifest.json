@@ -6,12 +6,12 @@
   "rootMainFiles": [],
   "pages": {
     "/mailxaminer-html-report": [
-      "static/chunks/8e73f191e7c683ab.js",
-      "static/chunks/e46b7c5b5bf9644b.js",
-      "static/chunks/ef992aa44d9e09d7.js",
+      "static/chunks/fbc5734b7d5be870.js",
+      "static/chunks/32677c26615f9ab9.js",
       "static/chunks/7e5e66bb7e7c1af7.js",
-      "static/chunks/8b5fc10c8a799fc6.css",
-      "static/chunks/turbopack-72d1cacc1cfa6d17.js"
+      "static/chunks/ef992aa44d9e09d7.js",
+      "static/chunks/f0f965e655e0fac9.css",
+      "static/chunks/turbopack-21fd47db152b9d91.js"
     ]
   },
   "ampFirstPages": []

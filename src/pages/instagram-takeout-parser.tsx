@@ -1,9 +1,5 @@
-import React, { useState, useRef } from 'react';
+import LightboxGallery from '../components/LightboxGallery';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
-import Captions from 'yet-another-react-lightbox/plugins/captions';
-import "yet-another-react-lightbox/plugins/captions.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -15,9 +11,6 @@ const slides = [
     { src: '/images/Instagram-Takeout-Parser/Storie.jpg', title: 'Visualizzazione Storie Instagram', description: '' },
 ];
 const InstagramTakeoutParser = () => {
-    const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [photoIndex, setPhotoIndex] = useState(0);
-    const captionsRef = React.useRef(null);
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
             <div style={{ padding: '1rem 2rem' }}>
@@ -33,28 +26,7 @@ const InstagramTakeoutParser = () => {
                         <FontAwesomeIcon icon={faGithub} style={{ marginRight: 8 }} />Vedi codice sorgente su GitHub
                     </a>
                 </div>
-                <div style={{ margin: '2rem 0' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {slides.map((slide, idx) => (
-                            <img
-                                key={slide.src}
-                                src={slide.src}
-                                alt={slide.title || `Screenshot ${idx + 1}`}
-                                style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer', marginBottom: '1rem' }}
-                                onClick={() => { setPhotoIndex(idx); setLightboxOpen(true); }}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <Lightbox
-                    open={lightboxOpen}
-                    close={() => setLightboxOpen(false)}
-                    slides={slides}
-                    index={photoIndex}
-                    on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
-                    plugins={[Captions]}
-                    captions={{ ref: captionsRef }}
-                />
+                <LightboxGallery slides={slides} />
             </div>
         </main>
     );
