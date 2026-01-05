@@ -17,7 +17,7 @@ const CellMapDesigner = () => {
     const [photoIndex, setPhotoIndex] = useState(0);
 
     return (
-        <main style={{ maxWidth: 1080, margin: '0 auto' }}>
+        <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>Cell Map Designer</h1>
                 <p>

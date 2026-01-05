@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PrivacyPolicy = () => (
-    <main style={{ maxWidth: 1080, margin: '0 auto' }}>
+    <main  className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
         <div style={{ padding: '1rem 2rem' }}>
             <h1>Privacy Policy</h1>
             <section>

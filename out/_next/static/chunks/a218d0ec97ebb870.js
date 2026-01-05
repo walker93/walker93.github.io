@@ -1,8 +1,0 @@
-__turbopack_load_page_chunks__("/instagram-takeout-parser", [
-  "static/chunks/d02d86b21805da20.js",
-  "static/chunks/9f9667a56a0a517e.js",
-  "static/chunks/5019a8bb44c2a332.js",
-  "static/chunks/ef992aa44d9e09d7.js",
-  "static/chunks/a4d58bef501c3fa7.css",
-  "static/chunks/turbopack-ec467b12bbb772ad.js"
-])

@@ -64,7 +64,7 @@ const softwareList = [
 const HomePage = () => {
     return (
         <div>
-            <main className='home-main' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
+            <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
                 <section style={{ marginBottom: '2rem' }}>
                     <p>
                         Benvenuto sul mio sito, sono laureato in Sicurezza dei sistemi e delle reti informatiche.<br />
