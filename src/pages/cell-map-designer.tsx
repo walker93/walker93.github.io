@@ -1,20 +1,21 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import "yet-another-react-lightbox/plugins/captions.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const images = [
-    '/images/Cell-Map-Designer/1.PNG',
-    '/images/Cell-Map-Designer/2.PNG',
-];
-const slides = images.map(src => ({src}));
-
+const slides = [
+    { src: '/images/Cell-Map-Designer/1.PNG', title: 'Cell Map Designer', description: 'Esempio di utilizzo con overlay applicato, punti di interesse, celle telefoniche e misurazione distanze.' },
+    { src: '/images/Cell-Map-Designer/2.PNG', title: 'Cell Map Designer', description: 'Esempio di utilizzo con  punti di interesse, celle telefoniche e misurazione distanze.' }
+]
 const CellMapDesigner = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
+    const captionsRef = React.useRef(null);
 
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
@@ -41,12 +42,12 @@ const CellMapDesigner = () => {
                 </div>
                 <div style={{ margin: '2rem 0' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                        {images.map((src, idx) => (
+                        {slides.map((slide, idx) => (
                             <img
-                                key={src}
-                                src={src}
-                                alt={`Screenshot Cell Map Designer ${idx + 1}`}
-                                style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer' }}
+                                key={slide.src}
+                                src={slide.src}
+                                alt={slide.title || `Screenshot ${idx + 1}`}
+                                style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer', marginBottom: '1rem' }}
                                 onClick={() => { setPhotoIndex(idx); setLightboxOpen(true); }}
                             />
                         ))}
@@ -58,6 +59,8 @@ const CellMapDesigner = () => {
                     slides={slides}
                     index={photoIndex}
                     on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                    plugins={[Captions]}
+                    captions={{ ref: captionsRef }}
                 />
             </div>
         </main>

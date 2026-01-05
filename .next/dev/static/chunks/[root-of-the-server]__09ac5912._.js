@@ -473,6 +473,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$solid$2d$svg$2d$icons$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/free-solid-svg-icons/index.mjs [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/yet-another-react-lightbox/dist/index.js [client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$plugins$2f$captions$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/yet-another-react-lightbox/dist/plugins/captions/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$index$2e$es$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/react-fontawesome/index.es.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$brands$2d$svg$2d$icons$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/free-brands-svg-icons/index.mjs [client] (ecmascript)");
 ;
@@ -483,17 +484,25 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const images = [
-    '/images/Cell-Map-Designer/1.PNG',
-    '/images/Cell-Map-Designer/2.PNG'
+;
+;
+const slides = [
+    {
+        src: '/images/Cell-Map-Designer/1.PNG',
+        title: 'Cell Map Designer',
+        description: 'Esempio di utilizzo con overlay applicato, punti di interesse, celle telefoniche e misurazione distanze.'
+    },
+    {
+        src: '/images/Cell-Map-Designer/2.PNG',
+        title: 'Cell Map Designer',
+        description: 'Esempio di utilizzo con  punti di interesse, celle telefoniche e misurazione distanze.'
+    }
 ];
-const slides = images.map((src)=>({
-        src
-    }));
 const CellMapDesigner = ()=>{
     _s();
     const [lightboxOpen, setLightboxOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [photoIndex, setPhotoIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const captionsRef = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].useRef(null);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "main-section",
         style: {
@@ -509,7 +518,7 @@ const CellMapDesigner = ()=>{
                     children: "Cell Map Designer"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                    lineNumber: 22,
+                    lineNumber: 23,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -517,49 +526,49 @@ const CellMapDesigner = ()=>{
                         "Cell Map Designer è uno strumento online che permette la rappresentazione grafica di celle telefoniche e relative aree di copertura unitamente a punti di interesse.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 185
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Permette di inserire, modificare ed eliminare celle telefoniche la cui posizione è nota. Dispone di uno strumento righello per misurare le distanze.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 25,
+                            lineNumber: 26,
                             columnNumber: 169
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Lo strumento consente l’importazione di più celle telefoniche tramite il caricamento di file CSV, e l’importazione ed esportazione di celle e punti di interesse tramite file GeoJSON.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 26,
+                            lineNumber: 27,
                             columnNumber: 203
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Supporta l’export anche di file KML e l’importazione di overlay KMZ per la compatibilità con Google Earth.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 27,
+                            lineNumber: 28,
                             columnNumber: 127
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Puoi personalizzare le icone dei punti di interesse (PoI) grazie alla libreria TomSelect e gestire le icone direttamente dalla sidebar, che ora è ridimensionabile.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 184
                         }, ("TURBOPACK compile-time value", void 0)),
                         "È possibile mostrare/nascondere celle e overlay, gestire più overlay contemporaneamente e visualizzare una tabella PoI con calcolo automatico delle aree poligonali.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 29,
+                            lineNumber: 30,
                             columnNumber: 185
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Il layout è completamente responsive e sono state aggiunte numerose icone e un logo personalizzato.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 120
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Tra i miglioramenti recenti: importazione multipla di overlay, fix per la tabella PoI, ottimizzazione della gestione immagini, e pulsanti migliorati.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 31,
+                            lineNumber: 32,
                             columnNumber: 170
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Il progetto è in continua evoluzione: consulta il ",
@@ -570,14 +579,14 @@ const CellMapDesigner = ()=>{
                             children: "changelog"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 32,
+                            lineNumber: 33,
                             columnNumber: 71
                         }, ("TURBOPACK compile-time value", void 0)),
                         " per tutte le novità."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                    lineNumber: 23,
+                    lineNumber: 24,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -601,14 +610,14 @@ const CellMapDesigner = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 "Provalo ora"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -627,20 +636,20 @@ const CellMapDesigner = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 40,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 "Vedi codice sorgente su GitHub"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/cell-map-designer.tsx",
-                            lineNumber: 38,
+                            lineNumber: 39,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                    lineNumber: 34,
+                    lineNumber: 35,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -653,32 +662,33 @@ const CellMapDesigner = ()=>{
                             alignItems: 'center',
                             gap: '1rem'
                         },
-                        children: images.map((src, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: src,
-                                alt: `Screenshot Cell Map Designer ${idx + 1}`,
+                        children: slides.map((slide, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: slide.src,
+                                alt: slide.title || `Screenshot ${idx + 1}`,
                                 style: {
                                     width: 320,
                                     borderRadius: 8,
                                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                                    cursor: 'pointer'
+                                    cursor: 'pointer',
+                                    marginBottom: '1rem'
                                 },
                                 onClick: ()=>{
                                     setPhotoIndex(idx);
                                     setLightboxOpen(true);
                                 }
-                            }, src, false, {
+                            }, slide.src, false, {
                                 fileName: "[project]/src/pages/cell-map-designer.tsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/pages/cell-map-designer.tsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                    lineNumber: 42,
+                    lineNumber: 43,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"], {
@@ -688,25 +698,31 @@ const CellMapDesigner = ()=>{
                     index: photoIndex,
                     on: {
                         view: ({ index })=>setPhotoIndex(index ?? 0)
+                    },
+                    plugins: [
+                        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$plugins$2f$captions$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"]
+                    ],
+                    captions: {
+                        ref: captionsRef
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/pages/cell-map-designer.tsx",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/cell-map-designer.tsx",
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/pages/cell-map-designer.tsx",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(CellMapDesigner, "fu0lcqOBTJwU8+Lc+7ggen7aKY8=");
+_s(CellMapDesigner, "fTDPY4MxH6JnCSOH20/U8glANsM=");
 _c = CellMapDesigner;
 const __TURBOPACK__default__export__ = CellMapDesigner;
 var _c;

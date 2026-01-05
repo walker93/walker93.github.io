@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import "yet-another-react-lightbox/plugins/captions.css";
 import 'yet-another-react-lightbox/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const images = [
-    '/images/TWRP-to-UFED/prompt command.jpg',
-    '/images/TWRP-to-UFED/comando in esecuzione.jpg',
-    '/images/TWRP-to-UFED/comando terminato.jpg',
-    '/images/TWRP-to-UFED/Struttura finale.jpg',
-    '/images/TWRP-to-UFED/Struttura finale2.jpg',
-    '/images/TWRP-to-UFED/twrp originale.jpg',
+const slides = [
+    { src: '/images/TWRP-to-UFED/prompt command.jpg', title: 'Prompt con comando da inviare', description: '' },
+    { src: '/images/TWRP-to-UFED/comando terminato.jpg', title: 'Comando terminato', description: '' },
+    { src: '/images/TWRP-to-UFED/twrp originale.jpg', title: 'Struttura originale generata dal Backup TWRP', description: '' },
+    { src: '/images/TWRP-to-UFED/Struttura finale2.jpg', title: 'Struttura delle cartelle al termine', description: 'La struttura delle cartelle a comando terminato contiene una cartella "UFED" da importare nel programma' },
 ];
-const slides = images.map(src => ({ src }));
 const TwrpToUfed = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
-
+    const captionsRef = React.useRef(null);
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
             <div style={{ padding: '1rem 2rem' }}>
@@ -33,11 +32,11 @@ const TwrpToUfed = () => {
                 </div>
                 <div style={{ margin: '2rem 0' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {images.map((src, idx) => (
+                        {slides.map((slide, idx) => (
                             <img
-                                key={src}
-                                src={src}
-                                alt={`Screenshot TWRP to UFED ${idx + 1}`}
+                                key={slide.src}
+                                src={slide.src}
+                                alt={slide.title || `Screenshot ${idx + 1}`}
                                 style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer', marginBottom: '1rem' }}
                                 onClick={() => { setPhotoIndex(idx); setLightboxOpen(true); }}
                             />
@@ -50,6 +49,8 @@ const TwrpToUfed = () => {
                     slides={slides}
                     index={photoIndex}
                     on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                    plugins={[Captions]}
+                    captions={{ ref: captionsRef }}
                 />
             </div>
         </main>

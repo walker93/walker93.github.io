@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import "yet-another-react-lightbox/plugins/captions.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const images = [
-    '/images/Instagram-Takeout-Parser/UI.jpg',
-    '/images/Instagram-Takeout-Parser/Home.jpg',
-    '/images/Instagram-Takeout-Parser/Post-Foto.jpg',
-    '/images/Instagram-Takeout-Parser/Storie.jpg',
-    '/images/Instagram-Takeout-Parser/convo.jpg',
+const slides = [
+    { src: '/images/Instagram-Takeout-Parser/Home.jpg', title: 'Homepage del report Instagram', description: '' },
+    { src: '/images/Instagram-Takeout-Parser/convo.jpg', title: 'Vista conversazioni Direct', description: 'Visualizzazione delle conversazioni Direct di Instagram con supporto a storie, condivisioni e like ai messaggi' },
+    { src: '/images/Instagram-Takeout-Parser/Post-Foto.jpg', title: 'Visualizzazione dei post di tipo immagine pubblicati', description: '' },
+    { src: '/images/Instagram-Takeout-Parser/UI.jpg', title: 'UI Instagram Takeout Parser', description: '' },
+    { src: '/images/Instagram-Takeout-Parser/Storie.jpg', title: 'Visualizzazione Storie Instagram', description: '' },
 ];
-const slides = images.map(src => ({ src }));
 const InstagramTakeoutParser = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
-
+    const captionsRef = React.useRef(null);
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
             <div style={{ padding: '1rem 2rem' }}>
@@ -34,11 +35,11 @@ const InstagramTakeoutParser = () => {
                 </div>
                 <div style={{ margin: '2rem 0' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {images.map((src, idx) => (
+                        {slides.map((slide, idx) => (
                             <img
-                                key={src}
-                                src={src}
-                                alt={`Screenshot Instagram Takeout Parser ${idx + 1}`}
+                                key={slide.src}
+                                src={slide.src}
+                                alt={slide.title || `Screenshot ${idx + 1}`}
                                 style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer', marginBottom: '1rem' }}
                                 onClick={() => { setPhotoIndex(idx); setLightboxOpen(true); }}
                             />
@@ -51,6 +52,8 @@ const InstagramTakeoutParser = () => {
                     slides={slides}
                     index={photoIndex}
                     on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                    plugins={[Captions]}
+                    captions={{ ref: captionsRef }}
                 />
             </div>
         </main>

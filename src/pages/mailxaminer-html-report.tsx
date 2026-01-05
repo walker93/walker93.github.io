@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import "yet-another-react-lightbox/plugins/captions.css";
 import 'yet-another-react-lightbox/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const images = [
-    '/images/MailXaminer/Strut-orig-2.jpg',
-    '/images/MailXaminer/layout filtered.jpg',
-    '/images/MailXaminer/layout.jpg',
-    '/images/MailXaminer/UI.jpg',
+const slides = [
+    { src: '/images/MailXaminer/UI.jpg', title: 'Interfaccia Grafica MailXaminer HTML Report', description: 'Il programma mostra la struttura delle cartelle prima di generare il report' },
+    { src: '/images/MailXaminer/Strut-orig-2.jpg', title: 'Struttura originaria', description: 'Struttura cartelle generata da MailXaminer, il programma riconoscerà la struttura e genererà i dovuti collegamenti' },
+    { src: '/images/MailXaminer/layout.jpg', title: 'Interfaccia del report', description: 'Interfaccia grafica del report, a sinistra la selezione delle cartelle. In alto delle mail, in basso la mail selezionata.' },
+    { src: '/images/MailXaminer/layout filtered.jpg', title: 'Interfaccia report con filtri', description: '' },
 ];
-const slides = images.map(src => ({ src }));
 const MailXaminerHtmlReport = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
-
+const captionsRef = React.useRef(null);
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
             <div style={{ padding: '1rem 2rem' }}>
@@ -33,11 +34,11 @@ const MailXaminerHtmlReport = () => {
                 </div>
                 <div style={{ margin: '2rem 0' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {images.map((src, idx) => (
+                        {slides.map((slide, idx) => (
                             <img
-                                key={src}
-                                src={src}
-                                alt={`Screenshot MailXaminer HTML Report ${idx + 1}`}
+                                key={slide.src}
+                                src={slide.src}
+                                alt={slide.title || `Screenshot ${idx + 1}`}
                                 style={{ width: 320, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.1)', cursor: 'pointer', marginBottom: '1rem' }}
                                 onClick={() => { setPhotoIndex(idx); setLightboxOpen(true); }}
                             />
@@ -50,6 +51,8 @@ const MailXaminerHtmlReport = () => {
                     slides={slides}
                     index={photoIndex}
                     on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                    plugins={[Captions]}
+                    captions={{ ref: captionsRef }}
                 />
             </div>
         </main>

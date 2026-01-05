@@ -472,6 +472,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/yet-another-react-lightbox/dist/index.js [client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$plugins$2f$captions$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/yet-another-react-lightbox/dist/plugins/captions/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$index$2e$es$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/react-fontawesome/index.es.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$brands$2d$svg$2d$icons$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/free-brands-svg-icons/index.mjs [client] (ecmascript)");
 ;
@@ -481,7 +482,9 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const images = [
+;
+;
+/*const slides = [
     '/images/Forensic-IMAP-Downloader/1.JPG',
     '/images/Forensic-IMAP-Downloader/2.JPG',
     '/images/Forensic-IMAP-Downloader/3.JPG',
@@ -489,16 +492,57 @@ const images = [
     '/images/Forensic-IMAP-Downloader/5.JPG',
     '/images/Forensic-IMAP-Downloader/6.JPG',
     '/images/Forensic-IMAP-Downloader/7.JPG',
-    '/images/Forensic-IMAP-Downloader/8.JPG'
+    '/images/Forensic-IMAP-Downloader/8.JPG',
+];*/ //const slides = images.map(src => ({ src }));
+const slides = [
+    {
+        src: '/images/Forensic-IMAP-Downloader/1.JPG',
+        title: 'Forensic IMAP Downloader',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/2.JPG',
+        title: 'Dopo aver inserito i parametri ed effettuato il collegamento',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/3.JPG',
+        title: 'Finestra di inserimento dei filtri',
+        description: "I pulsanti in alto permettono l'inserimento della query di ricerca in modo semplice e semi-automatico, non è richiesta alcuna competenza specifica per utilizzare questa funzione."
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/4.JPG',
+        title: 'Finestra principale dopo aver impostato dei filtri',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/5.JPG',
+        title: 'Interfaccia durante il download',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/6.JPG',
+        title: 'Finestra che chiede come comportarsi dopo l\'annullamento del download',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/7.JPG',
+        title: 'Finestra con alcuni download annullati',
+        description: ''
+    },
+    {
+        src: '/images/Forensic-IMAP-Downloader/8.JPG',
+        title: 'Report generato dal programma',
+        description: 'Il report mostra tutti i passaggi del programma con l\'HASH calcolato al termine'
+    }
 ];
-const slides = images.map((src)=>({
-        src
-    }));
 const ForensicImapDownloader = ()=>{
     _s();
+    const captionsRef = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].useRef(null);
     const [lightboxOpen, setLightboxOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [photoIndex, setPhotoIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(0);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+        className: "main-section",
         style: {
             maxWidth: 1080,
             margin: '0 auto'
@@ -512,7 +556,7 @@ const ForensicImapDownloader = ()=>{
                     children: "Forensic IMAP Downloader"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                    lineNumber: 25,
+                    lineNumber: 38,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -520,31 +564,31 @@ const ForensicImapDownloader = ()=>{
                         "Forensic IMAP Downloader è un programma che permette il download di e-mail da server IMAP in modo forense.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                            lineNumber: 27,
+                            lineNumber: 40,
                             columnNumber: 127
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Permette di impostare filtri e di scaricare solamente le e-mail di interesse, supporta download simultanei e offre la possibilità di interrompere e riprendere il download.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                            lineNumber: 28,
+                            lineNumber: 41,
                             columnNumber: 192
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Al termine inserisce i file scaricati in un archivio .zip e ne calcola l’HASH SHA-1.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                            lineNumber: 29,
+                            lineNumber: 42,
                             columnNumber: 105
                         }, ("TURBOPACK compile-time value", void 0)),
                         "Tutti i passaggi sono inoltre dettagliati all’interno di un report finale.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                            lineNumber: 30,
+                            lineNumber: 43,
                             columnNumber: 95
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                    lineNumber: 26,
+                    lineNumber: 39,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -567,19 +611,19 @@ const ForensicImapDownloader = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                                lineNumber: 34,
+                                lineNumber: 47,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             "Vedi codice sorgente su GitHub"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                        lineNumber: 33,
+                        lineNumber: 46,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                    lineNumber: 32,
+                    lineNumber: 45,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -594,9 +638,9 @@ const ForensicImapDownloader = ()=>{
                             flexWrap: 'wrap',
                             justifyContent: 'center'
                         },
-                        children: images.map((src, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: src,
-                                alt: `Screenshot Forensic IMAP Downloader ${idx + 1}`,
+                        children: slides.map((slide, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: slide.src,
+                                alt: slide.title || `Screenshot ${idx + 1}`,
                                 style: {
                                     width: 320,
                                     borderRadius: 8,
@@ -608,19 +652,19 @@ const ForensicImapDownloader = ()=>{
                                     setPhotoIndex(idx);
                                     setLightboxOpen(true);
                                 }
-                            }, src, false, {
+                            }, slide.src, false, {
                                 fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                                lineNumber: 40,
+                                lineNumber: 53,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                        lineNumber: 38,
+                        lineNumber: 51,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                    lineNumber: 37,
+                    lineNumber: 50,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"], {
@@ -630,25 +674,31 @@ const ForensicImapDownloader = ()=>{
                     index: photoIndex,
                     on: {
                         view: ({ index })=>setPhotoIndex(index ?? 0)
+                    },
+                    plugins: [
+                        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yet$2d$another$2d$react$2d$lightbox$2f$dist$2f$plugins$2f$captions$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"]
+                    ],
+                    captions: {
+                        ref: captionsRef
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-                    lineNumber: 50,
+                    lineNumber: 63,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-            lineNumber: 24,
+            lineNumber: 37,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/pages/forensic-imap-downloader.tsx",
-        lineNumber: 23,
+        lineNumber: 36,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(ForensicImapDownloader, "fu0lcqOBTJwU8+Lc+7ggen7aKY8=");
+_s(ForensicImapDownloader, "/JAxKLFahonUVavmnYtLInCyZ38=");
 _c = ForensicImapDownloader;
 const __TURBOPACK__default__export__ = ForensicImapDownloader;
 var _c;
