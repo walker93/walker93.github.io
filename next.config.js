@@ -4,5 +4,5 @@ module.exports = {
   images: {
     remotePatterns: [new URL('https://alexcortinovis.tech')], // Replace with your image domains if needed
   },
-  //output: 'export', // This is necessary for static export
+  output: 'export', // This is necessary for static export
 };
