@@ -64,11 +64,11 @@ const softwareList = [
 const HomePage = () => {
     return (
         <div>
-            <main style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
+            <main className='home-main' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
                 <section style={{ marginBottom: '2rem' }}>
                     <p>
                         Benvenuto sul mio sito, sono laureato in Sicurezza dei sistemi e delle reti informatiche.<br />
-                        Da 9 anni lavoro presso lo <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">Studio di Ingegneria Informatica Forense</a> del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di Digital Forensics and Data Recovery Expert.<br />
+                        Da 9 anni lavoro presso lo <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">Studio di Ingegneria Informatica Forense</a> del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di <i>Digital Forensics and Data Recovery Expert</i>.<br />
                         In questo sito puoi visionare e scaricare alcuni dei tool che ho sviluppato completamente nella filosofia Open Source.
                     </p>
                 </section>

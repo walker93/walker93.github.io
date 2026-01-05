@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const images = [
@@ -10,7 +10,7 @@ const images = [
     '/images/MailXaminer/layout.jpg',
     '/images/MailXaminer/UI.jpg',
 ];
-
+const slides = images.map(src => ({ src }));
 const MailXaminerHtmlReport = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
@@ -24,7 +24,7 @@ const MailXaminerHtmlReport = () => {
                     Questo file consente di visualizzare in una pagina web, suddivisa in 3 sezioni, tutte le e-mail del report generato.<br />
                     Sulla sinistra le sottocartelle, sulla destra in alto l’elenco di email che la cartella selezionata contiene, ed in basso l’e-mail selezionata.<br />
                     In aggiunta è possibile applicare dei filtri all’elenco di e-mail.<br />
-                    
+
                 </p>
                 <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
                     <a className="button" href="https://github.com/walker93/Mailxaminer-HTML-Report-Index" target="_blank" rel="noopener noreferrer">
@@ -44,17 +44,13 @@ const MailXaminerHtmlReport = () => {
                         ))}
                     </div>
                 </div>
-                {lightboxOpen && (
-                    <Lightbox
-                        mainSrc={images[photoIndex]}
-                        nextSrc={images[(photoIndex + 1) % images.length]}
-                        prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                        onCloseRequest={() => setLightboxOpen(false)}
-                        onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
-                        onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
-                        imageTitle={`Screenshot ${photoIndex + 1}`}
-                    />
-                )}
+                <Lightbox
+                    open={lightboxOpen}
+                    close={() => setLightboxOpen(false)}
+                    slides={slides}
+                    index={photoIndex}
+                    on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                />
             </div>
         </main>
     );

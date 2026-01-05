@@ -1,6 +1,13 @@
 h2 {
     text-align: center;
 }
+
+.yarl__root {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.7);
+}
+.chat--window {
+    --chat--window--margin-bottom: 0px !important;
+}
 /* Software grid & card styles */
 .software-grid {
     /*display: grid;
@@ -107,7 +114,7 @@ nav a:hover {
     color: #fff;
 }
 
-main {
+.home-main {
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     margin-bottom: 2rem;

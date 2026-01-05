@@ -1,0 +1,170 @@
+/* [project]/src/styles/globals.css [client] (css) */
+h2 {
+  text-align: center;
+}
+
+.yarl__root {
+  --yarl__color_backdrop: #000000b3;
+}
+
+.chat--window {
+  --chat--window--margin-bottom: 0px !important;
+}
+
+.software-grid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.software-card {
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 10px;
+  flex-direction: column;
+  flex-basis: 250px;
+  align-items: center;
+  max-width: 250px;
+  padding: 1.5rem 1.2rem;
+  transition: box-shadow .2s, transform .2s;
+  display: flex;
+  box-shadow: 0 2px 12px #00000012;
+}
+
+.software-card:hover {
+  background: #d5ebff;
+  transform: translateY(-4px)scale(1.03);
+  box-shadow: 0 4px 24px #0070f321;
+}
+
+.software-card h3 {
+  color: #0070f3;
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-size: 1.2rem;
+}
+
+.software-card p {
+  color: #333;
+  margin-bottom: 1em;
+  font-size: 1rem;
+}
+
+.software-card .button {
+  margin-top: auto;
+}
+
+body {
+  color: #222;
+  background: #f6f8fa url("/sfondo-sfoca-rad.png") center / cover no-repeat fixed;
+  margin: 0;
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .5em;
+  padding: 0;
+  font-weight: 700;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+a:hover {
+  color: #0051a8;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  color: #222;
+  background: #fff;
+  margin-bottom: 2rem;
+  padding: 20px 0 10px;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+nav ul {
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  letter-spacing: .02em;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: background .2s, color .2s;
+}
+
+nav a:hover {
+  color: #fff;
+  background: #ffffff1f;
+}
+
+.home-main {
+  background: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 16px #00000012;
+}
+
+section {
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  background: #0070f3;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background .2s;
+  display: inline-block;
+  box-shadow: 0 1px 4px #00000014;
+}
+
+.button:hover {
+  color: #fff;
+  background: #0051a8;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  nav ul {
+    gap: .7rem;
+    font-size: .95rem;
+  }
+}
+
+/*# sourceMappingURL=src_styles_globals_css_65f1660e._.single.css.map*/

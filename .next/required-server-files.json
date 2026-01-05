@@ -1,1 +1,167 @@
-{"version":1,"config":{"env":{},"webpack":null,"webpackDevMiddleware":null,"eslint":{"ignoreDuringBuilds":false},"typescript":{"ignoreBuildErrors":false,"tsconfigPath":"tsconfig.json"},"distDir":".next","cleanDistDir":true,"assetPrefix":"","configOrigin":"next.config.js","useFileSystemPublicRoutes":true,"generateEtags":true,"pageExtensions":["tsx","ts","jsx","js"],"target":"server","poweredByHeader":true,"compress":true,"analyticsId":"","images":{"deviceSizes":[640,750,828,1080,1200,1920,2048,3840],"imageSizes":[16,32,48,64,96,128,256,384],"path":"/_next/image","loader":"default","domains":["alexcortinovis.tech"],"disableStaticImages":false,"minimumCacheTTL":60,"formats":["image/webp"],"dangerouslyAllowSVG":false,"contentSecurityPolicy":"script-src 'none'; frame-src 'none'; sandbox;","remotePatterns":[],"unoptimized":false},"devIndicators":{"buildActivity":true,"buildActivityPosition":"bottom-right"},"onDemandEntries":{"maxInactiveAge":15000,"pagesBufferLength":2},"amp":{"canonicalBase":""},"basePath":"","sassOptions":{},"trailingSlash":false,"i18n":null,"productionBrowserSourceMaps":false,"optimizeFonts":true,"excludeDefaultMomentLocales":true,"serverRuntimeConfig":{},"publicRuntimeConfig":{},"reactStrictMode":true,"httpAgentOptions":{"keepAlive":true},"outputFileTracing":true,"staticPageGenerationTimeout":60,"swcMinify":true,"output":"export","experimental":{"optimisticClientCache":true,"manualClientBasePath":false,"legacyBrowsers":true,"browsersListForSwc":false,"newNextLinkBehavior":false,"cpus":3,"sharedPool":true,"profiling":false,"isrFlushToDisk":true,"workerThreads":false,"pageEnv":false,"optimizeCss":false,"nextScriptWorkers":false,"scrollRestoration":false,"externalDir":false,"disableOptimizedLoading":false,"gzipSize":true,"swcFileReading":true,"craCompat":false,"esmExternals":true,"appDir":false,"isrMemoryCacheSize":52428800,"serverComponents":false,"fullySpecified":false,"outputFileTracingRoot":"","swcTraceProfiling":false,"forceSwcTransforms":false,"largePageDataBytes":128000,"adjustFontFallbacks":false,"trustHostHeader":false},"configFileName":"next.config.js"},"appDir":"D:\\walke\\Source\\Repos\\alexcortinovis.tech","files":[".next\\routes-manifest.json",".next\\server\\pages-manifest.json",".next\\build-manifest.json",".next\\prerender-manifest.json",".next\\server\\middleware-manifest.json",".next\\react-loadable-manifest.json",".next\\server\\font-manifest.json",".next\\BUILD_ID"],"ignore":["node_modules\\next\\dist\\compiled\\@ampproject\\toolbox-optimizer\\**\\*"]}
+{
+  "version": 1,
+  "config": {
+    "distDir": ".next",
+    "cacheComponents": false,
+    "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
+    "assetPrefix": "",
+    "trailingSlash": false,
+    "images": {
+      "deviceSizes": [
+        640,
+        750,
+        828,
+        1080,
+        1200,
+        1920,
+        2048,
+        3840
+      ],
+      "imageSizes": [
+        32,
+        48,
+        64,
+        96,
+        128,
+        256,
+        384
+      ],
+      "path": "/_next/image",
+      "loader": "default",
+      "loaderFile": "",
+      "domains": [],
+      "disableStaticImages": false,
+      "minimumCacheTTL": 14400,
+      "formats": [
+        "image/webp"
+      ],
+      "maximumRedirects": 3,
+      "dangerouslyAllowLocalIP": false,
+      "dangerouslyAllowSVG": false,
+      "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+      "contentDispositionType": "attachment",
+      "localPatterns": [
+        {
+          "pathname": "**",
+          "search": ""
+        }
+      ],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "alexcortinovis.tech",
+          "port": "",
+          "pathname": "/",
+          "search": ""
+        }
+      ],
+      "qualities": [
+        75
+      ],
+      "unoptimized": false
+    },
+    "reactMaxHeadersLength": 6000,
+    "cacheLife": {
+      "default": {
+        "stale": 300,
+        "revalidate": 900,
+        "expire": 4294967294
+      },
+      "seconds": {
+        "stale": 30,
+        "revalidate": 1,
+        "expire": 60
+      },
+      "minutes": {
+        "stale": 300,
+        "revalidate": 60,
+        "expire": 3600
+      },
+      "hours": {
+        "stale": 300,
+        "revalidate": 3600,
+        "expire": 86400
+      },
+      "days": {
+        "stale": 300,
+        "revalidate": 86400,
+        "expire": 604800
+      },
+      "weeks": {
+        "stale": 300,
+        "revalidate": 604800,
+        "expire": 2592000
+      },
+      "max": {
+        "stale": 300,
+        "revalidate": 2592000,
+        "expire": 31536000
+      }
+    },
+    "basePath": "",
+    "expireTime": 31536000,
+    "generateEtags": true,
+    "poweredByHeader": true,
+    "cacheHandlers": {},
+    "cacheMaxMemorySize": 52428800,
+    "compress": true,
+    "i18n": null,
+    "httpAgentOptions": {
+      "keepAlive": true
+    },
+    "pageExtensions": [
+      "tsx",
+      "ts",
+      "jsx",
+      "js"
+    ],
+    "useFileSystemPublicRoutes": true,
+    "experimental": {
+      "ppr": false,
+      "staleTimes": {
+        "dynamic": 0,
+        "static": 300
+      },
+      "dynamicOnHover": false,
+      "inlineCss": false,
+      "authInterrupts": false,
+      "fetchCacheKeyPrefix": "",
+      "isrFlushToDisk": true,
+      "optimizeCss": false,
+      "nextScriptWorkers": false,
+      "disableOptimizedLoading": false,
+      "largePageDataBytes": 128000,
+      "serverComponentsHmrCache": true,
+      "caseSensitiveRoutes": false,
+      "validateRSCRequestHeaders": false,
+      "useSkewCookie": false,
+      "preloadEntriesOnStart": true,
+      "hideLogsAfterAbort": false,
+      "removeUncaughtErrorAndRejectionListeners": false,
+      "imgOptConcurrency": null,
+      "imgOptMaxInputPixels": 268402689,
+      "imgOptSequentialRead": null,
+      "imgOptSkipMetadata": null,
+      "imgOptTimeoutInSeconds": 7,
+      "proxyClientMaxBodySize": 10485760,
+      "trustHostHeader": false,
+      "isExperimentalCompile": false
+    }
+  },
+  "appDir": "D:\\Source\\Repos\\alexcortinovis.tech",
+  "relativeAppDir": "",
+  "files": [
+    ".next\\routes-manifest.json",
+    ".next\\server\\pages-manifest.json",
+    ".next\\build-manifest.json",
+    ".next\\prerender-manifest.json",
+    ".next\\server\\functions-config-manifest.json",
+    ".next\\server\\middleware-manifest.json",
+    ".next\\server\\middleware-build-manifest.js",
+    ".next\\BUILD_ID",
+    ".next\\server\\next-font-manifest.js",
+    ".next\\server\\next-font-manifest.json",
+    ".next\\required-server-files.json"
+  ],
+  "ignore": []
+}

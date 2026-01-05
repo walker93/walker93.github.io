@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -12,7 +12,7 @@ const images = [
     '/images/Instagram-Takeout-Parser/Storie.jpg',
     '/images/Instagram-Takeout-Parser/convo.jpg',
 ];
-
+const slides = images.map(src => ({ src }));
 const InstagramTakeoutParser = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
@@ -45,17 +45,13 @@ const InstagramTakeoutParser = () => {
                         ))}
                     </div>
                 </div>
-                {lightboxOpen && (
-                    <Lightbox
-                        mainSrc={images[photoIndex]}
-                        nextSrc={images[(photoIndex + 1) % images.length]}
-                        prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                        onCloseRequest={() => setLightboxOpen(false)}
-                        onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
-                        onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
-                        imageTitle={`Screenshot ${photoIndex + 1}`}
-                    />
-                )}
+                <Lightbox
+                    open={lightboxOpen}
+                    close={() => setLightboxOpen(false)}
+                    slides={slides}
+                    index={photoIndex}
+                    on={{ view: ({ index }) => setPhotoIndex(index ?? 0) }}
+                />
             </div>
         </main>
     );

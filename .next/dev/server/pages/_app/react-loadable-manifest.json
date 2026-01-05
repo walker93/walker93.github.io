@@ -1,0 +1,12 @@
+{
+  "[project]/node_modules/@n8n/chat/dist/chat.es.js [client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/node_modules/@n8n/chat/dist/chat.es.js [client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_@vue_runtime-core_dist_runtime-core_esm-bundler_86f701b4.js",
+      "static/chunks/node_modules_@n8n_chat_dist_chat_es_199ba235.js",
+      "static/chunks/node_modules_@n8n_chat_dist_chat_es_65b1f457.js",
+      "static/chunks/node_modules_fc19acc2._.js",
+      "static/chunks/node_modules_@n8n_chat_dist_chat_es_d35d5e3c.js"
+    ]
+  }
+}
