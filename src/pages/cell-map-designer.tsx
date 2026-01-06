@@ -1,5 +1,5 @@
 import LightboxGallery from '../components/LightboxGallery';
-
+import HeadComponent from '../components/HeadComponent';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -11,7 +11,13 @@ const slides = [
 const CellMapDesigner = () => {
 
     return (
+
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+            <HeadComponent title="Cell Map Designer - Alex Cortinovis"
+                description="Cell Map Designer è uno strumento online che permette la rappresentazione grafica di celle telefoniche e relative aree di copertura unitamente a punti di interesse."
+                url="https://alexcortinovis.tech/cell-map-designer"
+                image={slides[0].src}
+            />
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>Cell Map Designer</h1>
                 <p>

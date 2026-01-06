@@ -1,6 +1,7 @@
 import LightboxGallery from '../components/LightboxGallery';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HeadComponent from '../components/HeadComponent';
 
 const slides = [
     { src: '/images/MailXaminer/UI.jpg', title: 'Interfaccia Grafica MailXaminer HTML Report', description: 'Il programma mostra la struttura delle cartelle prima di generare il report' },
@@ -12,6 +13,12 @@ const MailXaminerHtmlReport = () => {
 
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+            <HeadComponent
+                title="MailXaminer HTML Report - Alex Cortinovis"
+                description="L’applicazione permette di generare un file HTML Indice per visualizzare in una pagina web tutte le e-mail esportate in HTML dal software forense MailXaminer."
+                url="https://alexcortinovis.tech/mailxaminer-html-report"
+                image={slides[0].src}
+            />
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>MailXaminer HTML Report</h1>
                 <p>

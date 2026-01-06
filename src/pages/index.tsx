@@ -2,6 +2,7 @@ import React from 'react';
 import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt, faEnvelope, faFileArchive } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import SoftwareCard from '../components/software-card';
+import HeadComponent from '../components/HeadComponent';
 
 const softwareList = [
     {
@@ -64,6 +65,10 @@ const softwareList = [
 const HomePage = () => {
     return (
         <div>
+            <HeadComponent title="Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente"
+            description="Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l'analisi forense digitale."
+            url="https://alexcortinovis.tech/" 
+            image="/og_image.png" />
             <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
                 <section style={{ marginBottom: '2rem' }}>
                     <p>

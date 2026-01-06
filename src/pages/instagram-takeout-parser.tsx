@@ -1,7 +1,7 @@
 import LightboxGallery from '../components/LightboxGallery';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import HeadComponent from '../components/HeadComponent';
 
 const slides = [
     { src: '/images/Instagram-Takeout-Parser/Home.jpg', title: 'Homepage del report Instagram', description: '' },
@@ -13,6 +13,11 @@ const slides = [
 const InstagramTakeoutParser = () => {
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+            <HeadComponent
+                title="Instagram Takeout Parser - Alex Cortinovis"
+                description="Genera un report HTML di un Takeout Instagram scaricato localmente, permettendo una facile consultazione dei dati."
+                url="https://alexcortinovis.tech/instagram-takeout-parser"
+                image={slides[0].src} />
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>Instagram Takeout Parser</h1>
                 <p>

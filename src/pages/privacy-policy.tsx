@@ -1,7 +1,13 @@
-import React from 'react';
+import HeadComponent from "../components/HeadComponent";
 
 const PrivacyPolicy = () => (
     <main  className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+        <HeadComponent
+            title="Privacy Policy - Alex Cortinovis"
+            description="Informativa sulla privacy del sito web alexcortinovis.tech"
+            url="https://alexcortinovis.tech/privacy-policy"
+            image="/og_image.png"
+        />
         <div style={{ padding: '1rem 2rem' }}>
             <h1>Privacy Policy</h1>
             <section>

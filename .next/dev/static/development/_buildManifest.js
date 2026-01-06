@@ -2,14 +2,8 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/forensic-imap-downloader": [
-    "static/chunks/pages/forensic-imap-downloader.js"
-  ],
-  "/instagram-takeout-parser": [
-    "static/chunks/pages/instagram-takeout-parser.js"
-  ],
-  "/twrp-to-ufed": [
-    "static/chunks/pages/twrp-to-ufed.js"
+  "/cell-map-designer": [
+    "static/chunks/pages/cell-map-designer.js"
   ],
   "__rewrites": {
     "afterFiles": [],

@@ -1,6 +1,7 @@
 import LightboxGallery from '../components/LightboxGallery';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HeadComponent from '../components/HeadComponent';
 
 const slides = [
     { src: '/images/TWRP-to-UFED/prompt command.jpg', title: 'Prompt con comando da inviare', description: '' },
@@ -11,6 +12,12 @@ const slides = [
 const TwrpToUfed = () => {
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+            <HeadComponent
+                title="TWRP to UFED - Alex Cortinovis"
+                description="L’applicazione è in grado di convertire un Nandroid Backup generato con la nota custom recovery TWRP in formato importabile nella suite Cellebrite UFED Physical Analyzer."
+                url="https://alexcortinovis.tech/twrp-to-ufed"
+                image={slides[0].src}
+            />
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>TWRP to UFED</h1>
                 <p>

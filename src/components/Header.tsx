@@ -1,12 +1,11 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-
 const Header = () => {
+
     return (
         <header style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0 0 0', width: '100%' }}>
-            <h1 style={{ textAlign: 'center' , margin:0 }}>Alex Cortinovis</h1>
-            <h2 style={{ textAlign: 'center', fontWeight: 400, fontSize: '1.1rem', lineHeight: 1.5, marginBottom: '10px' ,color: '#757575' }}>Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente</h2>
+            <h1 style={{ textAlign: 'center', margin: 0 }}>Alex Cortinovis</h1>
+            <h2 style={{ textAlign: 'center', fontWeight: 400, fontSize: '1.1rem', lineHeight: 1.5, marginBottom: '10px', color: '#757575' }}>Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente</h2>
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#222', padding: '1rem' }}>
                 <ul
                     style={{ display: 'flex', gap: '1.5rem', alignItems: 'baseline', listStyle: 'none', margin: 0, padding: 0, color: '#fff' }}

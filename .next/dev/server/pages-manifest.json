@@ -2,7 +2,5 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/forensic-imap-downloader": "pages/forensic-imap-downloader.js",
-  "/instagram-takeout-parser": "pages/instagram-takeout-parser.js",
-  "/twrp-to-ufed": "pages/twrp-to-ufed.js"
+  "/cell-map-designer": "pages/cell-map-designer.js"
 }

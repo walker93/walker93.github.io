@@ -1,5 +1,0 @@
-__turbopack_load_page_chunks__("/privacy-policy", [
-  "static/chunks/0588b786e369d68d.js",
-  "static/chunks/ef992aa44d9e09d7.js",
-  "static/chunks/turbopack-61c4b7203d670a31.js"
-])

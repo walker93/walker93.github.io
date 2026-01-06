@@ -1,7 +1,7 @@
 import LightboxGallery from '../components/LightboxGallery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import HeadComponent from '../components/HeadComponent';
 const slides = [
     { src: '/images/Forensic-IMAP-Downloader/1.JPG', title: 'Forensic IMAP Downloader', description: '' },
     { src: '/images/Forensic-IMAP-Downloader/2.JPG', title: 'Dopo aver inserito i parametri ed effettuato il collegamento', description: '' },
@@ -17,6 +17,12 @@ const ForensicImapDownloader = () => {
 
     return (
         <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+            <HeadComponent
+                title="Forensic IMAP Downloader - Alex Cortinovis"
+                description="Forensic IMAP Downloader è un programma che permette il download di e-mail da server IMAP in modo forense."
+                url="https://alexcortinovis.tech/forensic-imap-downloader"
+                image={slides[0].src}
+            />
             <div style={{ padding: '1rem 2rem' }}>
                 <h1>Forensic IMAP Downloader</h1>
                 <p>
