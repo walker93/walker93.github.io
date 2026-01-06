@@ -11,7 +11,7 @@ const N8nChatComponent = dynamic(
         defaultLanguage: "en",
         initialMessages: [
           'Ciao 👋',
-          'Sono Alex. Come posso aiutarti?'
+          'Sono l\'assistente AI di Alex. Come posso aiutarti?'
         ],
         i18n: {
           en: {
