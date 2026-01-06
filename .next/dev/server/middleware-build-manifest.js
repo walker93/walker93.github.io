@@ -15,19 +15,19 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/turbopack-src_pages_index_c381fb0d._.js"
     ],
     "/_app": [
-      "static/chunks/node_modules_@n8n_chat_dist_chat_es_8f48841f.js",
+      "static/chunks/node_modules_@n8n_chat_dist_chat_es_170b36bc.js",
       "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
       "static/chunks/node_modules_next_dist_shared_lib_bea38bb3._.js",
       "static/chunks/node_modules_next_dist_client_5a8a528e._.js",
       "static/chunks/node_modules_next_dist_41ce5ee3._.js",
-      "static/chunks/node_modules_next_dynamic_d0f0e623.js",
+      "static/chunks/node_modules_next_67d3b48a._.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_@fortawesome_free-brands-svg-icons_index_mjs_e6bf0867._.js",
-      "static/chunks/node_modules_461aad71._.js",
+      "static/chunks/node_modules_c4bfd98f._.js",
       "static/chunks/[root-of-the-server]__b210ed24._.js",
-      "static/chunks/_744b6817._.css",
+      "static/chunks/_ac3edb8c._.css",
       "static/chunks/src_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-src_pages__app_8021dced._.js"
+      "static/chunks/turbopack-src_pages__app_fc40f112._.js"
     ],
     "/cell-map-designer": [
       "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
@@ -44,6 +44,19 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_yet-another-react-lightbox_dist_66dfcbc0._.css",
       "static/chunks/src_pages_cell-map-designer_2da965e7._.js",
       "static/chunks/turbopack-src_pages_cell-map-designer_7d11b588._.js"
+    ],
+    "/privacy-policy": [
+      "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_9a2a7093._.js",
+      "static/chunks/node_modules_next_dist_client_5a8a528e._.js",
+      "static/chunks/node_modules_next_dist_41ce5ee3._.js",
+      "static/chunks/node_modules_next_head_6b89d279.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_@fortawesome_free-solid-svg-icons_index_mjs_5a74a531._.js",
+      "static/chunks/node_modules_461aad71._.js",
+      "static/chunks/[root-of-the-server]__65711288._.js",
+      "static/chunks/src_pages_privacy-policy_2da965e7._.js",
+      "static/chunks/turbopack-src_pages_privacy-policy_a71ff348._.js"
     ]
   },
   "devFiles": [],

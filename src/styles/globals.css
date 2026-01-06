@@ -1,13 +1,16 @@
 h2 {
     text-align: center;
 }
+:root {
+    --chat--color--primary: #0070f3 !important;
+    --chat--color--primary-shade-50: #0051a8 !important;
+	--chat--color--primary--shade-100: #00387A !important;
 
+}
 .yarl__root {
   --yarl__color_backdrop: rgba(0, 0, 0, 0.7);
 }
-.chat--window {
-    --chat--window--margin-bottom: 0px !important;
-}
+
 /* Software grid & card styles */
 .software-grid {
     /*display: grid;

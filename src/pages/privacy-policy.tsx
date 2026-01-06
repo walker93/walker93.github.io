@@ -1,7 +1,9 @@
 import HeadComponent from "../components/HeadComponent";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 
 const PrivacyPolicy = () => (
-    <main  className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
+    <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto' }}>
         <HeadComponent
             title="Privacy Policy - Alex Cortinovis"
             description="Informativa sulla privacy del sito web alexcortinovis.tech"
@@ -64,6 +66,9 @@ const PrivacyPolicy = () => (
             </section>
             <section>
                 <p>Questa informativa è aggiornata al 27 luglio 2025.</p>
+                <a className="button" style={{ marginLeft: '1rem' }}>
+                    <FontAwesomeIcon icon={faCookieBite} style={{ marginRight: 8 }} />Mostra preferenze cookie
+                </a>
             </section>
         </div>
     </main>

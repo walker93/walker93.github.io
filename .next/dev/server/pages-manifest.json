@@ -2,5 +2,6 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/cell-map-designer": "pages/cell-map-designer.js"
+  "/cell-map-designer": "pages/cell-map-designer.js",
+  "/privacy-policy": "pages/privacy-policy.js"
 }

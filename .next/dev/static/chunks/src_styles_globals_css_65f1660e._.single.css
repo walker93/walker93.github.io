@@ -3,12 +3,14 @@ h2 {
   text-align: center;
 }
 
-.yarl__root {
-  --yarl__color_backdrop: #000000b3;
+:root {
+  --chat--color--primary: #0070f3 !important;
+  --chat--color--primary-shade-50: #0051a8 !important;
+  --chat--color--primary--shade-100: #00387a !important;
 }
 
-.chat--window {
-  --chat--window--margin-bottom: 0px !important;
+.yarl__root {
+  --yarl__color_backdrop: #000000b3;
 }
 
 .software-grid {
