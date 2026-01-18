@@ -21,7 +21,7 @@ const HeadComponent = ({ title, description, url, image}: Props) => {
                 <meta property='og:image' content={image || '/og-image.png'} />
                 <meta property='og:type' content='website' />
                 <meta property='charset' content='UTF-8' />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
         </>
     );

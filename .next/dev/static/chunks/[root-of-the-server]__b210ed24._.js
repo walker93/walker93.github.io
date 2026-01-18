@@ -864,13 +864,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dyna
 ;
 const N8nChatComponent = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dynamic$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"])(_c = async ()=>{
     const { createChat } = await __turbopack_context__.A("[project]/node_modules/@n8n/chat/dist/chat.es.js [client] (ecmascript, next/dynamic entry, async loader)");
+    // Aggiungere verifica online webhook prima di creare la chat, se offline non mostrare la chat
+    const response = await fetch('https://lattepanda.my.to:88/webhook/46718653-b37f-4202-adbb-68bd563a0614/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            test: 'ping'
+        })
+    }).catch(()=>null);
+    if (!response) return null;
     const N8nChat = ()=>{
         const n8nChat = createChat({
             webhookUrl: 'https://lattepanda.my.to:88/webhook/46718653-b37f-4202-adbb-68bd563a0614/chat',
             defaultLanguage: "en",
             initialMessages: [
                 'Ciao 👋',
-                'Sono Alex. Come posso aiutarti?'
+                'Sono l\'assistente AI di Alex. Come posso aiutarti?'
             ],
             i18n: {
                 en: {

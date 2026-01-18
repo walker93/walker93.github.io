@@ -1,27 +1,27 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/c6df72350cec1a52.js"
+    "static/chunks/d9bc7acc678cbf6b.js"
   ],
   "/_error": [
     "static/chunks/361ac7c91050776d.js"
   ],
   "/cell-map-designer": [
-    "static/chunks/e4796677fa88289c.js"
+    "static/chunks/2b7dd065a99bb753.js"
   ],
   "/forensic-imap-downloader": [
-    "static/chunks/13beb1c923c29d60.js"
+    "static/chunks/3001cf9cbb910762.js"
   ],
   "/instagram-takeout-parser": [
-    "static/chunks/287de9ad0d6da4bc.js"
+    "static/chunks/21db1b1c219a4474.js"
   ],
   "/mailxaminer-html-report": [
-    "static/chunks/1dad7ac6f32a708d.js"
+    "static/chunks/3e22d650c1830476.js"
   ],
   "/privacy-policy": [
-    "static/chunks/b9a26d8934a478a9.js"
+    "static/chunks/82d84abe4b7add67.js"
   ],
   "/twrp-to-ufed": [
-    "static/chunks/18ef10ebc69a025a.js"
+    "static/chunks/3056aa5c458d4512.js"
   ],
   "__rewrites": {
     "afterFiles": [],

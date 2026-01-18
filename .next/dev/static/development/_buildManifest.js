@@ -2,12 +2,6 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/cell-map-designer": [
-    "static/chunks/pages/cell-map-designer.js"
-  ],
-  "/privacy-policy": [
-    "static/chunks/pages/privacy-policy.js"
-  ],
   "__rewrites": {
     "afterFiles": [],
     "beforeFiles": [],

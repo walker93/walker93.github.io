@@ -4,7 +4,15 @@ import dynamic from 'next/dynamic';
 const N8nChatComponent = dynamic(
   async () => {
     const { createChat } = await import('@n8n/chat');
-    
+    // Aggiungere verifica online webhook prima di creare la chat, se offline non mostrare la chat
+    const response = await fetch('https://lattepanda.my.to:88/webhook/46718653-b37f-4202-adbb-68bd563a0614/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ test: 'ping' })
+    }).catch(() => null);
+    if (!response) return null;
     const N8nChat = () => {
       const n8nChat = createChat({
         webhookUrl: 'https://lattepanda.my.to:88/webhook/46718653-b37f-4202-adbb-68bd563a0614/chat',
