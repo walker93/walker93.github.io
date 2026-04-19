@@ -1,0 +1,18 @@
+{
+  "title": "Instagram Takeout Parser",
+  "description": "Instagram Takeout Parser is a program that generates an HTML report of all Instagram content.",
+  "sourceCode": "View source code on GitHub",
+  "gallery": {
+    "slide1": { "title": "Instagram Report Homepage", "description": "" },
+    "slide2": { "title": "Direct Conversations View", "description": "Instagram Direct conversations display with support for stories, shares and message likes" },
+    "slide3": { "title": "Image Posts Display", "description": "" },
+    "slide4": { "title": "Instagram Takeout Parser UI", "description": "" },
+    "slide5": { "title": "Instagram Stories Display", "description": "" }
+  },
+  "content": {
+    "intro": "The application allows you to generate an HTML report of an Instagram Takeout downloaded locally.",
+    "takeout": "The Takeout is normally downloaded in a Zip file containing various multimedia files and JSON format files with all account information.",
+    "problem": "However, downloaded files are not immediately accessible, and some knowledge of the language is needed for their interpretation.",
+    "solution": "This application extracts information from JSON files and inserts it into an HTML report structured in tables, which allows for easy consultation from your favorite browser."
+  }
+}

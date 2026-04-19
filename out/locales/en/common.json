@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Alex Cortinovis",
+    "subtitle": "Expert in Digital Forensic and Data Recovery, Independent Developer",
+    "home": "Home",
+    "software": "Software",
+    "privacyPolicy": "Privacy Policy",
+    "linkedIn": "LinkedIn",
+    "gitHub": "GitHub"
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© 2025 Alex Cortinovis"
+  },
+  "n8n": {
+    "title": "Hello 👋",
+    "subtitle": "Write in chat. I'll answer your questions",
+    "footer": "",
+    "getStarted": "New conversation",
+    "inputPlaceholder": "Ask your question...",
+    "closeButtonTooltip": "Close chat"
+  }
+}

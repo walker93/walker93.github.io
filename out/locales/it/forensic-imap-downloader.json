@@ -1,0 +1,16 @@
+{
+  "title": "Forensic IMAP Downloader",
+  "description": "Forensic IMAP Downloader è un programma che permette il download di e-mail da server IMAP in modo forense.",
+  "details": "Permette di impostare filtri e di scaricare solamente le e-mail di interesse, supporta download simultanei e offre la possibilità di interrompere e riprendere il download. Al termine inserisce i file scaricati in un archivio .zip e ne calcola l'HASH SHA-1. Tutti i passaggi sono inoltre dettagliati all'interno di un report finale.",
+  "sourceCode": "Vedi codice sorgente su GitHub",
+  "gallery": {
+    "slide1": { "title": "Forensic IMAP Downloader", "description": "" },
+    "slide2": { "title": "Dopo aver inserito i parametri ed effettuato il collegamento", "description": "" },
+    "slide3": { "title": "Finestra di inserimento dei filtri", "description": "I pulsanti in alto permettono l'inserimento della query di ricerca in modo semplice e semi-automatico, non è richiesta alcuna competenza specifica per utilizzare questa funzione." },
+    "slide4": { "title": "Finestra principale dopo aver impostato dei filtri", "description": "" },
+    "slide5": { "title": "Interfaccia durante il download", "description": "" },
+    "slide6": { "title": "Finestra che chiede come comportarsi dopo l'annullamento del download", "description": "" },
+    "slide7": { "title": "Finestra con alcuni download annullati", "description": "" },
+    "slide8": { "title": "Report generato dal programma", "description": "Il report mostra tutti i passaggi del programma con l'HASH calcolato al termine" }
+  }
+}

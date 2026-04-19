@@ -1,0 +1,14 @@
+{
+  "title": "Cell Map Designer",
+  "description": "Cell Map Designer è uno strumento online che permette la rappresentazione grafica di celle telefoniche e relative aree di copertura unitamente a punti di interesse.",
+  "details": "Permette di inserire, modificare ed eliminare celle telefoniche la cui posizione è nota. Dispone di uno strumento righello per misurare le distanze. Lo strumento consente l'importazione di più celle telefoniche tramite il caricamento di file CSV, e l'importazione ed esportazione di celle e punti di interesse tramite file GeoJSON. Supporta l'export anche di file KML e l'importazione di overlay KMZ per la compatibilità con Google Earth. Puoi personalizzare le icone dei punti di interesse (PoI) grazie alla libreria TomSelect e gestire le icone direttamente dalla sidebar, che ora è ridimensionabile. È possibile mostrare/nascondere celle e overlay, gestire più overlay contemporaneamente e visualizzare una tabella PoI con calcolo automatico delle aree poligonali.",
+  "features": "Il layout è completamente responsive e sono state aggiunte numerose icone e un logo personalizzato. Tra i miglioramenti recenti: importazione multipla di overlay, fix per la tabella PoI, ottimizzazione della gestione immagini, e pulsanti migliorati. Il progetto è in continua evoluzione: ",
+  "changelogLink": "consulta il changelog",
+  "forNews": " per tutte le novità.",
+  "tryNow": "Provalo ora",
+  "sourceCode": "Vedi codice sorgente su GitHub",
+  "gallery": {
+    "slide1": { "title": "Cell Map Designer", "description": "Esempio di utilizzo con overlay applicato, punti di interesse, celle telefoniche e misurazione distanze." },
+    "slide2": { "title": "Cell Map Designer", "description": "Esempio di utilizzo con punti di interesse, celle telefoniche e misurazione distanze." }
+  }
+}

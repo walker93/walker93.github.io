@@ -1,0 +1,17 @@
+{
+  "title": "TWRP to UFED",
+  "description": "TWRP to UFED è un programma che converte backup TWRP in formato UFED Physical Analyzer.",
+  "sourceCode": "Vedi codice sorgente su GitHub",
+  "gallery": {
+    "slide1": { "title": "Prompt con comando", "description": "" },
+    "slide2": { "title": "Comando terminato", "description": "" },
+    "slide3": { "title": "Struttura originale generata dal Backup TWRP", "description": "" },
+    "slide4": { "title": "Struttura delle cartelle al termine", "description": "La struttura delle cartelle a comando terminato contiene una cartella 'UFED' da importare nel programma" }
+  },
+  "content": {
+    "intro": "L'applicazione è in grado di convertire un Nandroid Backup generato con la nota custom recovery",
+    "format": "in formato importabile nella suite Cellebrite UFED Physical Analyzer.",
+    "usecase": "Questo strumento torna utile quando non è possibile eseguire l'acquisizione fisica di un dispositivo mobile Android, ma è però possibile installare od eseguire la custom recovery ed effettuare il backup su SD o supporto OTG esterno.",
+    "usage": "L'esecuzione è molto semplice, sprovvisto di un'interfaccia grafica, è sufficiente indicare la cartella contenente il backup durante l'esecuzione da Prompt o Powershell."
+  }
+}

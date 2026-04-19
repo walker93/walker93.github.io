@@ -5,12 +5,12 @@
   "static/chunks/node_modules_next_dist_shared_lib_9a2a7093._.js",
   "static/chunks/node_modules_next_dist_client_5a8a528e._.js",
   "static/chunks/node_modules_next_dist_41ce5ee3._.js",
-  "static/chunks/node_modules_next_head_6b89d279.js",
+  "static/chunks/node_modules_next_cfb04b16._.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
   "static/chunks/node_modules_@fortawesome_free-solid-svg-icons_index_mjs_5a74a531._.js",
   "static/chunks/node_modules_@fortawesome_free-brands-svg-icons_index_mjs_e6bf0867._.js",
   "static/chunks/node_modules_461aad71._.js",
-  "static/chunks/[root-of-the-server]__3ffc32fd._.js"
+  "static/chunks/[root-of-the-server]__e82355ac._.js"
 ],
     source: "entry"
 });

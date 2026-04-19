@@ -1,0 +1,18 @@
+{
+  "title": "MailXaminer HTML Report",
+  "description": "MailXaminer HTML Report è un programma che genera una pagina index per visualizzare mail esportate in HTML.",
+  "sourceCode": "Vedi codice sorgente su GitHub",
+  "gallery": {
+    "slide1": { "title": "Interfaccia Grafica MailXaminer HTML Report", "description": "Il programma mostra la struttura delle cartelle prima di generare il report" },
+    "slide2": { "title": "Struttura originaria", "description": "Struttura cartelle generata da MailXaminer, il programma riconoscerà la struttura e genererà i dovuti collegamenti" },
+    "slide3": { "title": "Interfaccia del report", "description": "Interfaccia grafica del report, a sinistra la selezione delle cartelle. In alto delle mail, in basso la mail selezionata." },
+    "slide4": { "title": "Interfaccia report con filtri", "description": "" }
+  },
+  "content": {
+    "intro": "Partendo da un report HTML generato dal software forense",
+    "generate": "permette di generare un file HTML Indice.",
+    "description": "Questo file consente di visualizzare in una pagina web, suddivisa in 3 sezioni, tutte le e-mail del report generato.",
+    "layout": "Sulla sinistra le sottocartelle, sulla destra in alto l'elenco di email che la cartella selezionata contiene, ed in basso l'e-mail selezionata.",
+    "filters": "In aggiunta è possibile applicare dei filtri all'elenco di e-mail."
+  }
+}

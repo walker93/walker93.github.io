@@ -1,5 +1,11 @@
 {
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/cell-map-designer": "pages/cell-map-designer.js",
+  "/en": "pages/en.js",
+  "/en/cell-map-designer": "pages/en/cell-map-designer.js",
+  "/en/twrp-to-ufed": "pages/en/twrp-to-ufed.js",
+  "/forensic-imap-downloader": "pages/forensic-imap-downloader.js",
+  "/twrp-to-ufed": "pages/twrp-to-ufed.js"
 }

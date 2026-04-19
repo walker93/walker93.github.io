@@ -6,11 +6,12 @@
   "rootMainFiles": [],
   "pages": {
     "/privacy-policy": [
-      "static/chunks/59dea41dbf57337e.js",
-      "static/chunks/4c9f3a220e6c6c7c.js",
+      "static/chunks/0e39fd986f507e75.js",
+      "static/chunks/c4dd51af7baf13d7.js",
       "static/chunks/4d3e10769541768d.js",
-      "static/chunks/9b267b3d1f80b967.js",
-      "static/chunks/turbopack-b41438c02102e7fa.js"
+      "static/chunks/d7b173465c90879d.js",
+      "static/chunks/7c272eb19950f57e.js",
+      "static/chunks/turbopack-ea0e141f1bd897f1.js"
     ]
   },
   "ampFirstPages": []

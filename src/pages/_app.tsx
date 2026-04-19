@@ -7,11 +7,15 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { useEffect } from 'react';
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
+import { LanguageProvider, useLanguageContext } from '../context/LanguageContext';
+import { useRouter } from 'next/router';
 
+function MyAppContent({ Component, pageProps }) {
+  const router = useRouter();
+  const { language } = useLanguageContext();
 
-
-function MyApp({ Component, pageProps }) {
   useEffect(() => {
+    const lang = router.asPath.startsWith('/en') ? 'en' : 'it';
     CookieConsent.run({
       categories: {
         necessary: {
@@ -22,9 +26,10 @@ function MyApp({ Component, pageProps }) {
       },
 
       language: {
-        default: 'it',
+        default: lang,
         translations: {
-          'it': '/CookieConsent/it.json'
+          'it': '/CookieConsent/it.json',
+          'en': '/CookieConsent/en.json'
         }
       },
       guiOptions: {
@@ -36,7 +41,8 @@ function MyApp({ Component, pageProps }) {
         }
       }
     });
-  }, []);
+  }, [router.asPath]);
+
   return (
     <>
       <Header />
@@ -45,6 +51,14 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Footer />
     </>
+  );
+}
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <LanguageProvider>
+      <MyAppContent Component={Component} pageProps={pageProps} />
+    </LanguageProvider>
   );
 }
 

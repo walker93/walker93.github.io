@@ -1,0 +1,14 @@
+{
+  "title": "Cell Map Designer",
+  "description": "Cell Map Designer is an online tool that allows graphic representation of cell towers and related coverage areas together with points of interest.",
+  "details": "It allows you to insert, modify and delete cell towers whose position is known. It has a ruler tool to measure distances. The tool allows importing multiple cell towers by uploading CSV files, and importing and exporting cell towers and points of interest via GeoJSON files. It also supports exporting KML files and importing KMZ overlays for compatibility with Google Earth. You can customize point of interest (PoI) icons thanks to the TomSelect library and manage icons directly from the sidebar, which is now resizable. You can show/hide cells and overlays, manage multiple overlays simultaneously and view a PoI table with automatic polygonal area calculation.",
+  "features": "The layout is fully responsive and many icons and a custom logo have been added. Recent improvements include: multiple overlay import, PoI table fix, image management optimization, and improved buttons. The project is constantly evolving: ",
+  "changelogLink": "check the changelog",
+  "forNews": " for all the news.",
+  "tryNow": "Try it now",
+  "sourceCode": "View source code on GitHub",
+  "gallery": {
+    "slide1": { "title": "Cell Map Designer", "description": "Example of use with applied overlay, points of interest, cell towers and distance measurement." },
+    "slide2": { "title": "Cell Map Designer", "description": "Example of use with points of interest, cell towers and distance measurement." }
+  }
+}

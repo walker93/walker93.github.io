@@ -3,82 +3,110 @@ import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import SoftwareCard from '../components/software-card';
 import HeadComponent from '../components/HeadComponent';
-
-const softwareList = [
-    {
-        icon: faCloudDownloadAlt,
-        title: 'Forensic IMAP Downloader',
-        description: 'Scarica e-mail da server IMAP in modalità forense.',
-        link: '/forensic-imap-downloader'
-    },
-    {
-        icon: faBroadcastTower,
-        title: 'Cell Map Designer',
-        description: 'Rappresenta su mappa celle telefoniche e punti di interesse.',
-        link: '/cell-map-designer'
-    },
-    {
-        icon: faMobileAlt,
-        title: 'TWRP to UFED',
-        description: 'Converte backup TWRP in formato UFED Physical Analyzer.',
-        link: '/twrp-to-ufed'
-    },
-    {
-        icon: faEnvelope,
-        title: 'MailXaminer HTML Report',
-        description: 'Genera una pagina index per visualizzare mail esportate in HTML.',
-        link: '/mailxaminer-html-report'
-    },
-    {
-        icon: faInstagram,
-        title: 'Instagram Takeout Parser',
-        description: 'Report HTML di tutti i contenuti Instagram.',
-        link: '/instagram-takeout-parser'
-    },
-    {
-        icon: faWhatsapp,
-        title: 'Whatsapp Export Report',
-        description: 'Genera report HTML per ogni chat Whatsapp.',
-        link: undefined
-    },
-    {
-        icon: faFileArchive,
-        title: 'Bulk UnArchiver',
-        description: 'Estrae ricorsivamente archivi mantenendo la struttura.',
-        link: undefined
-    },
-    {
-        icon: faImage,
-        title: 'Metadata Extractor',
-        description: 'Esporta tutti i metadati da immagini in un report.',
-        link: undefined
-    },
-    {
-        icon: faPaperclip,
-        title: 'Bulk EML Attachment',
-        description: 'Esporta massivamente allegati da mail.',
-        link: undefined
-    }
-];
-
+import { useTranslation } from '../hooks/useTranslation';
+import { useLanguageContext } from '../context/LanguageContext';
 
 const HomePage = () => {
+    const { t } = useTranslation('home');
+    const { language } = useLanguageContext();
+
+    const softwareList = [
+        {
+            icon: faCloudDownloadAlt,
+            title: t('softwareList.forensicImapDownloader.title'),
+            description: t('softwareList.forensicImapDownloader.description'),
+            link: language === 'en' ? '/en/forensic-imap-downloader' : '/forensic-imap-downloader'
+        },
+        {
+            icon: faBroadcastTower,
+            title: t('softwareList.cellMapDesigner.title'),
+            description: t('softwareList.cellMapDesigner.description'),
+            link: language === 'en' ? '/en/cell-map-designer' : '/cell-map-designer'
+        },
+        {
+            icon: faMobileAlt,
+            title: t('softwareList.twrpToUfed.title'),
+            description: t('softwareList.twrpToUfed.description'),
+            link: language === 'en' ? '/en/twrp-to-ufed' : '/twrp-to-ufed'
+        },
+        {
+            icon: faEnvelope,
+            title: t('softwareList.mailxaminerHtmlReport.title'),
+            description: t('softwareList.mailxaminerHtmlReport.description'),
+            link: language === 'en' ? '/en/mailxaminer-html-report' : '/mailxaminer-html-report'
+        },
+        {
+            icon: faInstagram,
+            title: t('softwareList.instagramTakeoutParser.title'),
+            description: t('softwareList.instagramTakeoutParser.description'),
+            link: language === 'en' ? '/en/instagram-takeout-parser' : '/instagram-takeout-parser'
+        },
+        {
+            icon: faWhatsapp,
+            title: t('softwareList.whatsappExportReport.title'),
+            description: t('softwareList.whatsappExportReport.description'),
+            link: undefined
+        },
+        {
+            icon: faFileArchive,
+            title: t('softwareList.bulkUnArchiver.title'),
+            description: t('softwareList.bulkUnArchiver.description'),
+            link: undefined
+        },
+        {
+            icon: faImage,
+            title: t('softwareList.metadataExtractor.title'),
+            description: t('softwareList.metadataExtractor.description'),
+            link: undefined
+        },
+        {
+            icon: faPaperclip,
+            title: t('softwareList.bulkEmlAttachment.title'),
+            description: t('softwareList.bulkEmlAttachment.description'),
+            link: undefined
+        }
+    ];
+
+    const seoData = language === 'en' ? {
+        title: 'Alex Cortinovis - Expert in Digital Forensic and Data Recovery, Independent Developer',
+        description: 'Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis.',
+        url: 'https://alexcortinovis.tech/en/',
+    } : {
+        title: 'Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente',
+        description: 'Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l\'analisi forense digitale.',
+        url: 'https://alexcortinovis.tech/',
+    };
+
     return (
         <div>
-            <HeadComponent title="Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente"
-            description="Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l'analisi forense digitale."
-            url="https://alexcortinovis.tech/" 
-            image="/og_image.png" />
+            <HeadComponent 
+                title={seoData.title}
+                description={seoData.description}
+                url={seoData.url}
+                image="/og_image.png" 
+            />
             <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
                 <section style={{ marginBottom: '2rem' }}>
                     <p>
-                        Benvenuto sul mio sito, sono laureato in Sicurezza dei sistemi e delle reti informatiche.<br />
-                        Da 9 anni lavoro presso lo <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">Studio di Ingegneria Informatica Forense</a> del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di <i>Digital Forensics and Data Recovery Expert</i>.<br />
-                        In questo sito puoi visionare e scaricare alcuni dei tool che ho sviluppato completamente nella filosofia Open Source.
+                        {t('experience')
+                            .replace('{{forenseStudio}}', `<a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">Studio di Ingegneria Informatica Forense</a>`)
+                            .replace('{{role}}', `<i>${t('roleTitle')}</i>`) && (
+                            <>
+                                {t('intro')}<br />
+                                {language === 'en' ? 'For 10 years I have been working at the ' : 'Da 10 anni lavoro presso lo '}
+                                <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">
+                                    {language === 'en' ? 'Forensic Engineering Studio' : 'Studio di Ingegneria Informatica Forense'}
+                                </a>
+                                {language === 'en' ? ' of Dr. Ing. Michele Vitiello in Brescia, where I perform the role of ' : ' del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di '}
+                                <i>{t('roleTitle')}</i>.
+                                <br />
+                                {t('disclaimer')}
+                            </>
+                        )}
                     </p>
                 </section>
                 <section style={{ marginBottom: '2rem' }}>
-                    <h2>Software sviluppati</h2>
+                    <h2>{t('softwareTitle')}</h2>
                     <div className="software-grid">
                         {softwareList.map((sw, idx) => (
                             <SoftwareCard key={idx} {...sw} />
@@ -86,9 +114,10 @@ const HomePage = () => {
                     </div>
                 </section>
                 <section>
-                    <h2>Contatto</h2>
+                    <h2>{t('contactTitle')}</h2>
                     <p>
-                        Se hai dubbi, vuoi conoscermi meglio o necessiti di contattarmi per qualsiasi altra ragione, puoi farlo tramite <a href="https://t.me/AlexCortinovis" target="_blank" rel="noopener noreferrer">Telegram</a>.
+                        {language === 'en' ? 'If you have any questions, want to know me better or need to contact me for any other reason, you can do so via ' : 'Se hai dubbi, vuoi conoscermi meglio o necessiti di contattarmi per qualsiasi altra ragione, puoi farlo tramite '}
+                        <a href="https://t.me/AlexCortinovis" target="_blank" rel="noopener noreferrer">Telegram</a>.
                     </p>
                 </section>
             </main>

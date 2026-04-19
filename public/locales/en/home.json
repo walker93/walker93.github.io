@@ -1,0 +1,47 @@
+{
+  "intro": "Welcome to my website. I'm a graduate in Security of Information Systems and Networks.",
+  "experience": "For 10 years I have been working at the {{forenseStudio}} of Dr. Ing. Michele Vitiello in Brescia, where I perform the role of {{role}}.",
+  "roleTitle": "Digital Forensics and Data Recovery Expert",
+  "disclaimer": "On this website you can view and download some of the tools I have developed completely in the Open Source philosophy.",
+  "softwareTitle": "Developed Software",
+  "contactTitle": "Contact",
+  "contactDescription": "If you have any questions, want to know me better or need to contact me for any other reason, you can do so via {{telegram}}.",
+  "softwareList": {
+    "forensicImapDownloader": {
+      "title": "Forensic IMAP Downloader",
+      "description": "Download emails from IMAP servers in forensic mode."
+    },
+    "cellMapDesigner": {
+      "title": "Cell Map Designer",
+      "description": "Represents cell towers and points of interest on a map."
+    },
+    "twrpToUfed": {
+      "title": "TWRP to UFED",
+      "description": "Converts TWRP backups to UFED Physical Analyzer format."
+    },
+    "mailxaminerHtmlReport": {
+      "title": "MailXaminer HTML Report",
+      "description": "Generates an index page to view emails exported in HTML."
+    },
+    "instagramTakeoutParser": {
+      "title": "Instagram Takeout Parser",
+      "description": "HTML report of all Instagram content."
+    },
+    "whatsappExportReport": {
+      "title": "Whatsapp Export Report",
+      "description": "Generates HTML report for each WhatsApp chat."
+    },
+    "bulkUnArchiver": {
+      "title": "Bulk UnArchiver",
+      "description": "Recursively extracts archives maintaining structure."
+    },
+    "metadataExtractor": {
+      "title": "Metadata Extractor",
+      "description": "Exports all metadata from images in a report."
+    },
+    "bulkEmlAttachment": {
+      "title": "Bulk EML Attachment",
+      "description": "Massively exports attachments from emails."
+    }
+  }
+}

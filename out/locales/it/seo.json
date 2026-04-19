@@ -1,0 +1,37 @@
+{
+  "home": {
+    "title": "Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente",
+    "description": "Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l'analisi forense digitale.",
+    "url": "https://alexcortinovis.tech/"
+  },
+  "forensicImapDownloader": {
+    "title": "Forensic IMAP Downloader - Alex Cortinovis",
+    "description": "Forensic IMAP Downloader è un programma che permette il download di e-mail da server IMAP in modo forense.",
+    "url": "https://alexcortinovis.tech/forensic-imap-downloader"
+  },
+  "cellMapDesigner": {
+    "title": "Cell Map Designer - Alex Cortinovis",
+    "description": "Cell Map Designer è uno strumento online che permette la rappresentazione grafica di celle telefoniche e relative aree di copertura unitamente a punti di interesse.",
+    "url": "https://alexcortinovis.tech/cell-map-designer"
+  },
+  "instagramTakeoutParser": {
+    "title": "Instagram Takeout Parser - Alex Cortinovis",
+    "description": "Instagram Takeout Parser è un programma che genera un report HTML di tutti i contenuti Instagram.",
+    "url": "https://alexcortinovis.tech/instagram-takeout-parser"
+  },
+  "mailxaminerHtmlReport": {
+    "title": "MailXaminer HTML Report - Alex Cortinovis",
+    "description": "MailXaminer HTML Report è un programma che genera una pagina index per visualizzare mail esportate in HTML.",
+    "url": "https://alexcortinovis.tech/mailxaminer-html-report"
+  },
+  "twrpToUfed": {
+    "title": "TWRP to UFED - Alex Cortinovis",
+    "description": "TWRP to UFED è un programma che converte backup TWRP in formato UFED Physical Analyzer.",
+    "url": "https://alexcortinovis.tech/twrp-to-ufed"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy - Alex Cortinovis",
+    "description": "Informativa sulla privacy del sito web alexcortinovis.tech",
+    "url": "https://alexcortinovis.tech/privacy-policy"
+  }
+}
