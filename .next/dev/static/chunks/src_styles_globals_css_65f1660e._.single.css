@@ -169,4 +169,77 @@ ul {
   }
 }
 
+@media (max-width: 450px) {
+  h1 {
+    margin-bottom: .25em !important;
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    margin-bottom: .25em !important;
+    font-size: .9rem !important;
+  }
+
+  nav {
+    flex-flow: column wrap !important;
+    padding: .5rem !important;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column !important;
+    gap: .5rem !important;
+  }
+
+  nav a {
+    padding: .4em .8em !important;
+    font-size: .9rem !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+  }
+
+  .nav-main {
+    width: 100%;
+    flex-direction: column !important;
+    display: none !important;
+  }
+
+  .menu-open .nav-main {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+  }
+
+  .nav-right {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: .5rem !important;
+    width: 100% !important;
+    margin: .5rem 0 0 !important;
+    display: none !important;
+  }
+
+  .menu-open .nav-right {
+    display: flex !important;
+  }
+
+  .lang-btn {
+    min-width: auto !important;
+    padding: .3rem .5rem !important;
+    font-size: .85rem !important;
+  }
+
+  .software-grid {
+    gap: 1rem !important;
+  }
+
+  .software-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
 /*# sourceMappingURL=src_styles_globals_css_65f1660e._.single.css.map*/

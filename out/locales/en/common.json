@@ -19,5 +19,32 @@
     "getStarted": "New conversation",
     "inputPlaceholder": "Ask your question...",
     "closeButtonTooltip": "Close chat"
+  },
+  "cellMapDesigner": {
+    "title": "Cell Map Designer",
+    "pageTitle": "Cell Map Designer - Alex Cortinovis",
+    "description": "Cell Map Designer is an online tool that allows the graphic representation of cell towers and related coverage areas together with points of interest.",
+    "paragraph1": "It allows you to insert, modify and delete cell towers whose position is known. It has a ruler tool to measure distances.",
+    "paragraph2": "The tool allows importing multiple cell towers by uploading CSV files, and importing and exporting cells and points of interest via GeoJSON files.",
+    "paragraph3": "It also supports exporting KML files and importing KMZ overlays for compatibility with Google Earth.",
+    "paragraph4": "You can customize point of interest (PoI) icons thanks to the TomSelect library and manage icons directly from the sidebar, which is now resizable.",
+    "paragraph5": "You can show/hide cells and overlays, manage multiple overlays simultaneously and view a PoI table with automatic polygonal area calculation.",
+    "paragraph6": "The layout is fully responsive and numerous icons and a custom logo have been added.",
+    "paragraph7": "Among recent improvements: multiple overlay import, PoI table fix, image management optimization, and improved buttons.",
+    "paragraph8": "The project is constantly evolving: check the",
+    "changelogLink": "changelog",
+    "paragraph8End": "for all the news.",
+    "tryNow": "Try it now",
+    "sourceCode": "View source code on GitHub",
+    "gallery": {
+      "slide1": {
+        "title": "Cell Map Designer",
+        "description": "Example of use with applied overlay, points of interest, cell towers and distance measurement."
+      },
+      "slide2": {
+        "title": "Cell Map Designer",
+        "description": "Example of use with points of interest, cell towers and distance measurement."
+      }
+    }
   }
 }

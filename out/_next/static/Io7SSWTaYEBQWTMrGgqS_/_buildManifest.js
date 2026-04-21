@@ -1,18 +1,18 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/7ce040a3bb609960.js"
+    "static/chunks/573fad063c6665e0.js"
   ],
   "/_error": [
     "static/chunks/a92de53403b1acfe.js"
   ],
   "/cell-map-designer": [
-    "static/chunks/c36608241af9ee91.js"
+    "static/chunks/449341809e4497a7.js"
   ],
   "/en": [
-    "static/chunks/9f481192afeb8cf1.js"
+    "static/chunks/6b44f4b70276a3f1.js"
   ],
   "/en/cell-map-designer": [
-    "static/chunks/a836096d0a38dca3.js"
+    "static/chunks/53889879c5f584a1.js"
   ],
   "/en/forensic-imap-downloader": [
     "static/chunks/e80e8b5c03a9066d.js"
@@ -24,7 +24,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/a4d3e79a6a2df008.js"
   ],
   "/en/privacy-policy": [
-    "static/chunks/f27e6f31e63d9f75.js"
+    "static/chunks/03f18f01120f8512.js"
   ],
   "/en/twrp-to-ufed": [
     "static/chunks/d02417c71f524084.js"
@@ -39,7 +39,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/e37e1b2276a1606b.js"
   ],
   "/privacy-policy": [
-    "static/chunks/868610589d729911.js"
+    "static/chunks/71d3965b3aae0521.js"
   ],
   "/twrp-to-ufed": [
     "static/chunks/8899890bf18bf8cd.js"

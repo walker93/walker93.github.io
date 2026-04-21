@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from '../hooks/useTranslation';
 import { useRouter } from 'next/router';
 
@@ -8,6 +9,20 @@ const Header = () => {
     const { t, language } = useTranslation('common');
     const router = useRouter();
     const [langMenuOpen, setLangMenuOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [softwareMenuOpen, setSoftwareMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect mobile screen size
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 450);
+        };
+
+        handleResize(); // Set initial value
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const italianFlag = (
         <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ verticalAlign: 'middle', marginRight: '0.35rem' }}>
@@ -54,23 +69,53 @@ const Header = () => {
         <header style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0 0 0', width: '100%' }}>
             <h1 style={{ textAlign: 'center', margin: 0 }}>{t('header.title')}</h1>
             <h2 style={{ textAlign: 'center', fontWeight: 400, fontSize: '1.1rem', lineHeight: 1.5, marginBottom: '10px', color: '#757575' }}>{t('header.subtitle')}</h2>
-            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#222', padding: '1rem' }}>
+            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#222', padding: '1rem', position: 'relative' }} className={isMobileMenuOpen ? 'menu-open' : ''}>
+                {/* Hamburger Button - visible only on mobile */}
+                <button
+                    className="hamburger-btn"
+                    type="button"
+                    onClick={() => setIsMobileMenuOpen(prev => !prev)}
+                    style={{
+                        display: 'none',
+                        backgroundColor: '#222',
+                        color: '#fff',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: '1.5rem',
+                        padding: '0.5rem',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px'
+                    }}
+                    title={isMobileMenuOpen ? t('header.closeMenu') || 'Close menu' : t('header.openMenu') || 'Open menu'}
+                >
+                    <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+                </button>
+
+                {/* Main Navigation */}
                 <ul
-                    style={{ display: 'flex', gap: '1.5rem', alignItems: 'baseline', listStyle: 'none', margin: 0, padding: 0, color: '#fff' }}
+                    className="nav-main"
+                    style={{ display: isMobile && !isMobileMenuOpen ? 'none' : 'flex', gap: '1.5rem', alignItems: 'baseline', listStyle: 'none', margin: 0, padding: 0, color: '#fff' }}
                 >
                     <li><a href={isEnglish ? '/en' : '/'}>{t('header.home')}</a></li>
                     <li
                         style={{ position: 'relative' }}
-                        onMouseEnter={e => {
+                        onMouseEnter={isMobile ? undefined : (e => {
                             const submenu = e.currentTarget.querySelector('.submenu');
                             if (submenu) (submenu as HTMLElement).style.display = 'block';
-                        }}
-                        onMouseLeave={e => {
+                        })}
+                        onMouseLeave={isMobile ? undefined : (e => {
                             const submenu = e.currentTarget.querySelector('.submenu');
                             if (submenu) (submenu as HTMLElement).style.display = 'none';
-                        }}
+                        })}
                     >
-                        <span style={{ cursor: 'pointer', fontWeight: 500 }}>{t('header.software')} ▾</span>
+                        <span 
+                            style={{ cursor: 'pointer', fontWeight: 500 }} 
+                            onClick={isMobile ? () => setSoftwareMenuOpen(prev => !prev) : undefined}
+                        >
+                            {t('header.software')} ▾
+                        </span>
                         <ul
                             className="submenu"
                             style={{
@@ -83,7 +128,7 @@ const Header = () => {
                                 padding: '0.5rem 0',
                                 minWidth: '220px',
                                 zIndex: 10,
-                                display: 'none',
+                                display: isMobile ? (softwareMenuOpen ? 'block' : 'none') : 'none',
                                 color: '#fff',
                             }}
                         >
@@ -95,7 +140,12 @@ const Header = () => {
                         </ul>
                     </li>
                 </ul>
-                <ul style={{ display: 'flex', gap: '1.2rem', alignItems: 'center', listStyle: 'none', margin: 0, padding: 0 }}>
+
+                {/* Right Navigation - Social & Language */}
+                <ul 
+                    className="nav-right"
+                    style={{ display: isMobile && !isMobileMenuOpen ? 'none' : 'flex', gap: '1.2rem', alignItems: 'center', listStyle: 'none', margin: 0, padding: 0 }}
+                >
                     
                     <li>
                         <a href="https://www.linkedin.com/in/alex-cortinovis-673590b6/" target="_blank" rel="noopener noreferrer">
@@ -110,6 +160,7 @@ const Header = () => {
                     
                     <li style={{ position: 'relative' }}>
                         <button
+                            className="lang-btn"
                             type="button"
                             onClick={() => setLangMenuOpen(prev => !prev)}
                             style={{

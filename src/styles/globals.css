@@ -163,3 +163,83 @@ ul {
         font-size: 0.95rem;
     }
 }
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.25em !important;
+    }
+
+    h2 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.25em !important;
+    }
+
+    nav {
+        padding: 0.5rem !important;
+        flex-wrap: wrap !important;
+        flex-direction: column !important;
+    }
+
+    nav ul {
+        gap: 0.5rem !important;
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 0.9rem !important;
+        padding: 0.4em 0.8em !important;
+    }
+
+    /* Hamburger button visibility */
+    .hamburger-btn {
+        display: flex !important;
+    }
+
+    /* Hide main nav by default on mobile */
+    .nav-main {
+        display: none !important;
+        width: 100%;
+        flex-direction: column !important;
+    }
+
+    /* Show main nav when menu is open */
+    .menu-open .nav-main {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+    }
+
+    /* Right nav items - hidden by default, shown when menu open */
+    .nav-right {
+        display: none !important;
+        width: 100% !important;
+        gap: 0.5rem !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        margin: 0.5rem 0 0 0 !important;
+    }
+
+    /* Show right nav when menu is open */
+    .menu-open .nav-right {
+        display: flex !important;
+    }
+
+    /* Language button more compact */
+    .lang-btn {
+        min-width: auto !important;
+        padding: 0.3rem 0.5rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .software-grid {
+        gap: 1rem !important;
+    }
+
+    .software-card {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
