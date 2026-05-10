@@ -33,6 +33,7 @@ const HeadComponent = ({ title, description, url, image}: Props) => {
             <Head>
                 <title>{title || 'Alex Cortinovis - Expert in Digital Forensic and Data Recovery, Independent Developer'}</title>
                 <meta property='og:title' content={title || 'Alex Cortinovis - Expert in Digital Forensic and Data Recovery, Independent Developer'} />
+                <meta name="description" content={description || "Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis."} />
                 <meta property="description" content={description || "Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis."} />
                 <meta property='og:description' content={description || "Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis."} />
                 <meta property='og:url' content={url || 'https://alexcortinovis.tech/'} />

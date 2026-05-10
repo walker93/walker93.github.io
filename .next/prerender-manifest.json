@@ -1,11 +1,38 @@
 {
   "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "preview": {
-    "previewModeId": "c8c5d97c524450fe410f93e3d5c0c56c",
-    "previewModeSigningKey": "d1518d321524a9f37dccf9166eda125d0e54bdc10ce663c6a759662da3edb7fd",
-    "previewModeEncryptionKey": "48e90e6c8461f5c20fd17eadb58e7da39c380111754d5b55c03bfc65dd04fc71"
+  "routes": {
+    "/": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/AcCJlD6VyN9dC9jCPVxQt/index.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/AcCJlD6VyN9dC9jCPVxQt/en.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
   },
-  "notFoundRoutes": []
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "913070f35a9fd7bdd400465cfee82d09",
+    "previewModeSigningKey": "84832ff49b7ffa51b587a34427ccc2a633669f8669cf4c3ee04494feb052b76e",
+    "previewModeEncryptionKey": "08b1275fb78b6ffc4f71c532e139011a632cea1ebf9063d24554c368231f9100"
+  }
 }

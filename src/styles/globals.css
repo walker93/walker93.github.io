@@ -13,17 +13,11 @@ h2 {
 
 /* Software grid & card styles */
 .software-grid {
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;*/
-
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1.5rem;
     justify-content: center;
-
 }
 
 .software-card {
@@ -62,7 +56,7 @@ h2 {
 body {
     margin: 0;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    background: #f6f8fa url('/sfondo-sfoca-rad.png') center center/cover no-repeat fixed;
+    background: #f6f8fa url('/sfondo-sfoca-rad.webp') center center/cover no-repeat fixed;
     color: #222;
     line-height: 1.7;
 }

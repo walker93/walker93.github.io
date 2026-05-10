@@ -1,0 +1,10 @@
+__turbopack_load_page_chunks__("/mailxaminer-html-report", [
+  "static/chunks/b4e7bfcc9e48c82a.js",
+  "static/chunks/9b4f8bc3cd97ad81.js",
+  "static/chunks/32677c26615f9ab9.js",
+  "static/chunks/d7b173465c90879d.js",
+  "static/chunks/7944b56869d89cf9.js",
+  "static/chunks/7c272eb19950f57e.js",
+  "static/chunks/f0f965e655e0fac9.css",
+  "static/chunks/turbopack-c5b7697e3b3d6265.js"
+])

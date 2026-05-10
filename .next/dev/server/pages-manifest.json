@@ -1,11 +1,5 @@
 {
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/cell-map-designer": "pages/cell-map-designer.js",
-  "/en": "pages/en.js",
-  "/en/cell-map-designer": "pages/en/cell-map-designer.js",
-  "/en/forensic-imap-downloader": "pages/en/forensic-imap-downloader.js",
-  "/forensic-imap-downloader": "pages/forensic-imap-downloader.js"
+  "/_document": "pages/_document.js"
 }

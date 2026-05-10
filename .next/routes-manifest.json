@@ -107,7 +107,16 @@
       "namedRegex": "^/twrp\\-to\\-ufed(?:/)?$"
     }
   ],
-  "dataRoutes": [],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/AcCJlD6VyN9dC9jCPVxQt/index\\.json$"
+    },
+    {
+      "page": "/en",
+      "dataRouteRegex": "^/_next/data/AcCJlD6VyN9dC9jCPVxQt/en\\.json$"
+    }
+  ],
   "rsc": {
     "header": "rsc",
     "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
