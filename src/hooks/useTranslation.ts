@@ -7,10 +7,10 @@ type Translations = {
 
 let translationCache: { [key: string]: Translations } = {};
 
-export const useTranslation = (namespace: string = 'common') => {
+export const useTranslation = (namespace: string = 'common', initialTranslations?: Translations) => {
   const router = useRouter();
-  const [translations, setTranslations] = useState<Translations>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [translations, setTranslations] = useState<Translations>(initialTranslations || {});
+  const [isLoading, setIsLoading] = useState(!initialTranslations);
 
   // Estrae la lingua dalla URL
   const getLanguage = (): 'it' | 'en' => {

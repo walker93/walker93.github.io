@@ -23,6 +23,7 @@ h2 {
 
 .software-card {
   text-align: center;
+  contain: layout style paint;
   background: #f8fafc;
   border-radius: 10px;
   flex-direction: column;

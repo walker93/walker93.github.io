@@ -6,8 +6,8 @@ import HeadComponent from '../components/HeadComponent';
 import { useTranslation } from '../hooks/useTranslation';
 import { useLanguageContext } from '../context/LanguageContext';
 
-const HomePage = () => {
-    const { t } = useTranslation('home');
+const HomePage = ({ initialTranslations }: any) => {
+    const { t } = useTranslation('home', initialTranslations?.home);
     const { language } = useLanguageContext();
 
     const softwareList = [
@@ -124,5 +124,41 @@ const HomePage = () => {
         </div>
     );
 };
+
+export async function getStaticProps(context: any) {
+    const path_module = require('path');
+    const fs_module = require('fs');
+    
+    // Homepage italiana (lingua di default)
+    const language = 'it';
+    
+    try {
+        // Carica le traduzioni build-time
+        const translationsPath = path_module.join(process.cwd(), 'public', 'locales', language, 'home.json');
+        const commonPath = path_module.join(process.cwd(), 'public', 'locales', language, 'common.json');
+        
+        const homeTranslations = JSON.parse(fs_module.readFileSync(translationsPath, 'utf-8'));
+        const commonTranslations = JSON.parse(fs_module.readFileSync(commonPath, 'utf-8'));
+        
+        return {
+            props: {
+                initialTranslations: {
+                    home: homeTranslations,
+                    common: commonTranslations
+                }
+            }
+        };
+    } catch (error) {
+        console.error('Failed to load translations:', error);
+        return {
+            props: {
+                initialTranslations: {
+                    home: {},
+                    common: {}
+                }
+            }
+        };
+    }
+}
 
 export default HomePage;
