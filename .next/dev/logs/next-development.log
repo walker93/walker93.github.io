@@ -1,5 +1,5 @@
-[00:00:00.618] Server  LOG     ✓ Ready in 401ms
-[00:00:01.643] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.657] Server  LOG     ✓ Ready in 446ms
+[00:00:01.604] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -27,8 +27,8 @@ It can also happen if the client has a browser extension installed which messes 
                     <a href="https://ww..." target="_blank" rel="noopener n...">
                       <FontAwesomeIcon icon={{prefix:"fab", ...}} style={{fontSize:"...", ...}} title="header.lin...">
                         <svg
-+                         aria-labelledby="svg-inline--fa-title-Rh2mlPnA7N6F"
--                         aria-labelledby="svg-inline--fa-title-IvACIOrT9GyY"
++                         aria-labelledby="svg-inline--fa-title-32sCrqtVEovn"
+-                         aria-labelledby="svg-inline--fa-title-3F9PsNYM6AuT"
                           data-prefix="fab"
                           data-icon="linkedin"
                           className={"svg-inline--fa fa-linkedin "}
@@ -39,8 +39,8 @@ It can also happen if the client has a browser extension installed which messes 
                           ref={null}
                         >
                           <title
-+                           id="svg-inline--fa-title-Rh2mlPnA7N6F"
--                           id="svg-inline--fa-title-IvACIOrT9GyY"
++                           id="svg-inline--fa-title-32sCrqtVEovn"
+-                           id="svg-inline--fa-title-3F9PsNYM6AuT"
                             style={{}}
                           >
 +                           header.linkedIn
@@ -49,8 +49,8 @@ It can also happen if the client has a browser extension installed which messes 
                     <a href="https://gi..." target="_blank" rel="noopener n...">
                       <FontAwesomeIcon icon={{prefix:"fab", ...}} style={{fontSize:"...", ...}} title="header.gitHub">
                         <svg
-+                         aria-labelledby="svg-inline--fa-title-y1pfaF3laHoJ"
--                         aria-labelledby="svg-inline--fa-title-g2AF3HV2OJfr"
++                         aria-labelledby="svg-inline--fa-title-tRecl5g29Dy0"
+-                         aria-labelledby="svg-inline--fa-title-r167fR2w4dmN"
                           data-prefix="fab"
                           data-icon="github"
                           className={"svg-inline--fa fa-github "}
@@ -61,8 +61,8 @@ It can also happen if the client has a browser extension installed which messes 
                           ref={null}
                         >
                           <title
-+                           id="svg-inline--fa-title-y1pfaF3laHoJ"
--                           id="svg-inline--fa-title-g2AF3HV2OJfr"
++                           id="svg-inline--fa-title-tRecl5g29Dy0"
+-                           id="svg-inline--fa-title-r167fR2w4dmN"
                             style={{}}
                           >
 +                           header.gitHub
@@ -71,6 +71,6 @@ It can also happen if the client has a browser extension installed which messes 
           ...
     ...
 
-[00:00:01.805] Browser WARN    Feature flags __VUE_OPTIONS_API__, __VUE_PROD_DEVTOOLS__, __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ are not explicitly defined. You are running the esm-bundler build of Vue, which expects these compile-time feature flags to be globally injected via the bundler config in order to get better tree-shaking in the production bundle.
+[00:00:01.761] Browser WARN    Feature flags __VUE_OPTIONS_API__, __VUE_PROD_DEVTOOLS__, __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ are not explicitly defined. You are running the esm-bundler build of Vue, which expects these compile-time feature flags to be globally injected via the bundler config in order to get better tree-shaking in the production bundle.
 
 For more details, see https://link.vuejs.org/feature-flags.
