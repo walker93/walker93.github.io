@@ -8,7 +8,9 @@
   "tryNow": "Provalo ora",
   "sourceCode": "Vedi codice sorgente su GitHub",
   "gallery": {
-    "slide1": { "title": "Cell Map Designer", "description": "Esempio di utilizzo con overlay applicato, punti di interesse, celle telefoniche e misurazione distanze." },
-    "slide2": { "title": "Cell Map Designer", "description": "Esempio di utilizzo con punti di interesse, celle telefoniche e misurazione distanze." }
-  }
+        "slide1" : { "title": "Cell Map Designer", "description": "Esempio di utilizzo con overlay applicato, punti di interesse, celle telefoniche e misurazione della distanza." },
+        "slide2" : { "title": "Cell Map Designer", "description": "Panoramica delle celle telefoniche e degli elementi d'interesse utilizzabili sulla mappa." },
+        "slide3" : { "title": "Cell Map Designer", "description": "Il menu del progetto nel pannello laterale." },
+        "slide4" : { "title": "Cell Map Designer", "description": "Il form di modifica consente di personalizzare le proprietà di ciascuna torre cellare." }
+    }
 }

@@ -6,13 +6,13 @@ self.__BUILD_MANIFEST = {
     "static/chunks/a92de53403b1acfe.js"
   ],
   "/cell-map-designer": [
-    "static/chunks/20f551c86e2103c8.js"
+    "static/chunks/3d203028ac9a19eb.js"
   ],
   "/en": [
     "static/chunks/c99b26adeca7e54a.js"
   ],
   "/en/cell-map-designer": [
-    "static/chunks/5faa0140addf5357.js"
+    "static/chunks/dec82513ab0362e6.js"
   ],
   "/en/forensic-imap-downloader": [
     "static/chunks/9092851aab0c3a39.js"

@@ -110,11 +110,11 @@
   "dataRoutes": [
     {
       "page": "/",
-      "dataRouteRegex": "^/_next/data/AcCJlD6VyN9dC9jCPVxQt/index\\.json$"
+      "dataRouteRegex": "^/_next/data/y4eKIepZxtcOnctAIG7fO/index\\.json$"
     },
     {
       "page": "/en",
-      "dataRouteRegex": "^/_next/data/AcCJlD6VyN9dC9jCPVxQt/en\\.json$"
+      "dataRouteRegex": "^/_next/data/y4eKIepZxtcOnctAIG7fO/en\\.json$"
     }
   ],
   "rsc": {
