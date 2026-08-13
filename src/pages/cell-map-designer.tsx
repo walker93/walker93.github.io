@@ -12,8 +12,10 @@ const CellMapDesigner = () => {
     const isEnglish = router.asPath.startsWith('/en');
 
     const slides = [
-        { src: '/images/Cell-Map-Designer/1.PNG', title: t('cellMapDesigner.gallery.slide1.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide1.description', 'Example of use with applied overlay, points of interest, cell towers and distance measurement.') },
-        { src: '/images/Cell-Map-Designer/2.PNG', title: t('cellMapDesigner.gallery.slide2.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide2.description', 'Example of use with points of interest, cell towers and distance measurement.') }
+        { src: '/images/Cell-Map-Designer/1.png', title: t('cellMapDesigner.gallery.slide1.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide1.description', 'Example of use with applied overlay, points of interest, cell towers and distance measurement.') },
+        { src: '/images/Cell-Map-Designer/2.png', title: t('cellMapDesigner.gallery.slide2.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide2.description', 'Showcase of usable map towers and points of interest.') },
+        { src: '/images/Cell-Map-Designer/3.png', title: t('cellMapDesigner.gallery.slide3.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide3.description', 'The edit form allows you to modify the properties of each cell tower.') },
+        { src: '/images/Cell-Map-Designer/4.png', title: t('cellMapDesigner.gallery.slide4.title', 'Cell Map Designer'), description: t('cellMapDesigner.gallery.slide4.description', 'The side panel project menu') }
     ];
 
     const pageUrl = isEnglish 

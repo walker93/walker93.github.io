@@ -8,7 +8,9 @@
   "tryNow": "Try it now",
   "sourceCode": "View source code on GitHub",
   "gallery": {
-    "slide1": { "title": "Cell Map Designer", "description": "Example of use with applied overlay, points of interest, cell towers and distance measurement." },
-    "slide2": { "title": "Cell Map Designer", "description": "Example of use with points of interest, cell towers and distance measurement." }
+      "slide1" : { "title": "Cell Map Designer", "description": "Example of use with applied overlay, points of interest, cell towers and distance measurement." },
+      "slide2" : { "title": "Cell Map Designer", "description": "Showcase of usable map towers and points of interest." },
+      "slide3" : { "title": "Cell Map Designer", "description": "The side panel project menu" },
+      "slide4" : { "title": "Cell Map Designer", "description": "The edit form allows you to modify the properties of each cell tower." }
   }
 }
