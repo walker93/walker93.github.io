@@ -7,6 +7,10 @@
   "contactTitle": "Contatto",
   "contactDescription": "Se hai dubbi, vuoi conoscermi meglio o necessiti di contattarmi per qualsiasi altra ragione, puoi farlo tramite {{telegram}}.",
   "softwareList": {
+    "dailyCrack": {
+      "title": "Daily Crack",
+      "description": "Puzzle quotidiano su password reali dai data breach."
+    },
     "forensicImapDownloader": {
       "title": "Forensic IMAP Downloader",
       "description": "Scarica e-mail da server IMAP in modalità forense."

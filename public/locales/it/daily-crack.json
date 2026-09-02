@@ -1,0 +1,35 @@
+{
+  "title": "Daily Crack",
+  "subtitle": "How many of you use this password?",
+  "description": "Daily Crack è un puzzle quotidiano gratuito in cui si indovina una password reale fra le più diffuse nei data breach, e alla soluzione si scopre quante volte è stata scelta davvero.",
+  "tryNow": "Provalo ora",
+  "content": {
+    "intro": "Un solo enigma al giorno, identico per tutti i giocatori del mondo: sei tentativi per indovinare una password reale, estratta fra le più diffuse nei data breach.",
+    "rules": "La pool è dichiarata fin dall'inizio — «la password di oggi è una delle più diffuse di sempre» — ed è la condizione che rende il puzzle risolvibile per deduzione e non per tentativi casuali. La lunghezza è visibile dalla prima riga, il minimo è di otto caratteri.",
+    "feedback": "Ogni tentativo restituisce un feedback posizione per posizione su due canali distinti: lo sfondo della cella dice se il carattere è giusto, il bordo dice se la classe di quella posizione (maiuscola, minuscola, cifra o simbolo) è quella corretta. Il confronto è case-sensitive: «i» e «I» sono caratteri diversi.",
+    "reveal": "Alla soluzione arriva il dato che distingue il gioco: quante volte quella password è stata scelta nel corpus delle violazioni, insieme alla classifica di tutte le varianti della stessa radice. Chi gioca «P@ssw0rd» scopre che l'intera famiglia «password» vale oltre 132 milioni di scelte su 410 varianti — cioè che la sostituzione che sembra proteggerlo non lo ha spostato in un'altra categoria.",
+    "source": "I numeri vengono da Have I Been Pwned — Pwned Passwords, con la data dello snapshot dichiarata in pagina. La schermata finale rimanda al servizio per controllare la propria password: solo i primi cinque caratteri dell'hash SHA-1 lasciano il browser (modello k-anonymity), il confronto avviene in locale.",
+    "privacy": "Non serve alcun account e non esiste un backend: progresso e statistiche restano nel browser e non viene caricato nessuno script di analytics. Il sito è installabile come applicazione (PWA) e funziona anche offline.",
+    "share": "A partita finita si condivide una griglia in emoji priva di spoiler, sul modello ormai riconoscibile dei puzzle quotidiani, con il conteggio reale della password del giorno.",
+    "pool": "La pool contiene 5.000 password selezionate e 2.492 famiglie di radici: oltre tredici anni di puzzle senza una ripetizione. Il puzzle del giorno è calcolato in UTC, così due giocatori in fusi orari diversi giocano sempre la stessa password.",
+    "language": "I contenuti del gioco sono in inglese."
+  },
+  "gallery": {
+    "slide1": {
+      "title": "Partita in corso",
+      "description": "Il feedback a due canali — sfondo per il carattere, bordo per la classe — e il segnale «parola trovata», che dice quando la radice di dizionario è al posto giusto."
+    },
+    "slide2": {
+      "title": "Schermata di rivelazione",
+      "description": "Quante volte la password è stata scelta, la classifica delle varianti della stessa famiglia, la regola di mangling che la genera e l'attribuzione a Have I Been Pwned."
+    },
+    "slide3": {
+      "title": "Le regole",
+      "description": "Come si gioca, mostrato alla prima visita: i due canali del feedback, la sensibilità alle maiuscole e i tre hint che non consumano un tentativo."
+    },
+    "slide4": {
+      "title": "I numeri",
+      "description": "La pagina About pubblica le statistiche sulle password reali misurate su due profondità di classifica, perché una serie sola non sarebbe verificabile."
+    }
+  }
+}

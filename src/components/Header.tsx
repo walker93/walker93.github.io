@@ -132,6 +132,7 @@ const Header = () => {
                                 color: '#fff',
                             }}
                         >
+                            <li><a href={isEnglish ? '/en/daily-crack' : '/daily-crack'} style={{ color: '#fff', padding: '0.5em 1em', display: 'block' }}>Daily Crack</a></li>
                             <li><a href={isEnglish ? '/en/forensic-imap-downloader' : '/forensic-imap-downloader'} style={{ color: '#fff', padding: '0.5em 1em', display: 'block' }}>Forensic IMAP Downloader</a></li>
                             <li><a href={isEnglish ? '/en/cell-map-designer' : '/cell-map-designer'} style={{ color: '#fff', padding: '0.5em 1em', display: 'block' }}>Cell Map Designer</a></li>
                             <li><a href={isEnglish ? '/en/instagram-takeout-parser' : '/instagram-takeout-parser'} style={{ color: '#fff', padding: '0.5em 1em', display: 'block' }}>Instagram Takeout Parser</a></li>

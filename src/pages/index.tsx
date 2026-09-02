@@ -1,5 +1,5 @@
 import React from 'react';
-import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt, faEnvelope, faFileArchive } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt, faEnvelope, faFileArchive, faKey } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import SoftwareCard from '../components/software-card';
 import HeadComponent from '../components/HeadComponent';
@@ -11,6 +11,12 @@ const HomePage = ({ initialTranslations }: any) => {
     const { language } = useLanguageContext();
 
     const softwareList = [
+        {
+            icon: faKey,
+            title: t('softwareList.dailyCrack.title'),
+            description: t('softwareList.dailyCrack.description'),
+            link: language === 'en' ? '/en/daily-crack' : '/daily-crack'
+        },
         {
             icon: faCloudDownloadAlt,
             title: t('softwareList.forensicImapDownloader.title'),
