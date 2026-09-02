@@ -9,7 +9,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/0cc9c242cc5c025d.js"
   ],
   "/daily-crack": [
-    "static/chunks/baf9778590e2e635.js"
+    "static/chunks/1cd69af3706d607e.js"
   ],
   "/en": [
     "static/chunks/bd7d403535068de1.js"
@@ -18,7 +18,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/710696b20b3ad9b6.js"
   ],
   "/en/daily-crack": [
-    "static/chunks/7bbd9199d0429f3f.js"
+    "static/chunks/c83332cd141cb511.js"
   ],
   "/en/forensic-imap-downloader": [
     "static/chunks/9092851aab0c3a39.js"

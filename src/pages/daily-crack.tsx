@@ -35,15 +35,13 @@ const DailyCrack = () => {
                 <h1>{t('title', 'Daily Crack')}</h1>
                 <p style={{ fontStyle: 'italic', color: '#757575', marginTop: '-0.5rem' }}>{t('subtitle', 'How many of you use this password?')}</p>
                 <p>
-                    {t('content.intro', '')}<br />
-                    {t('content.rules', '')}<br />
-                    {t('content.feedback', '')}<br />
+                    {t('content.hook', '')}<br />
+                    {t('content.lesson', '')}<br />
+                    {t('content.numbers', '')}<br />
+                    {t('content.play', '')}<br />
                     {t('content.reveal', '')}<br />
-                    {t('content.source', '')}<br />
-                    {t('content.privacy', '')}<br />
                     {t('content.share', '')}<br />
-                    {t('content.pool', '')}<br />
-                    {t('content.language', '')}
+                    {t('content.practical', '')}
                 </p>
                 <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
                     <a className="button" href={appUrl} target="_blank" rel="noopener noreferrer">

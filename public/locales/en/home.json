@@ -9,7 +9,7 @@
   "softwareList": {
     "dailyCrack": {
       "title": "Daily Crack",
-      "description": "Daily puzzle on real passwords from breach data."
+      "description": "Guess the day's password and see how many times it was chosen."
     },
     "forensicImapDownloader": {
       "title": "Forensic IMAP Downloader",
