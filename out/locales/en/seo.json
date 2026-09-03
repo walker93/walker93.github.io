@@ -4,6 +4,11 @@
     "description": "Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis.",
     "url": "https://alexcortinovis.tech/"
   },
+  "dailyCrack": {
+    "title": "Daily Crack - Alex Cortinovis",
+    "description": "Daily Crack is a free daily puzzle where you guess a real password from among the most common ones in breach data, and on solving it you find out how many times it was actually chosen.",
+    "url": "https://alexcortinovis.tech/en/daily-crack"
+  },
   "forensicImapDownloader": {
     "title": "Forensic IMAP Downloader - Alex Cortinovis",
     "description": "Forensic IMAP Downloader is a program that allows downloading emails from IMAP servers in forensic mode.",

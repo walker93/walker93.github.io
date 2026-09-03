@@ -32,6 +32,7 @@ export const getLocalizedPath = (path: string, language: Language): string => {
 export const pageNameToPath = (pageName: string, language: Language): string => {
   const paths: { [key: string]: string } = {
     'home': '/',
+    'daily-crack': '/daily-crack',
     'forensic-imap-downloader': '/forensic-imap-downloader',
     'cell-map-designer': '/cell-map-designer',
     'instagram-takeout-parser': '/instagram-takeout-parser',

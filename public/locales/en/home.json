@@ -7,6 +7,10 @@
   "contactTitle": "Contact",
   "contactDescription": "If you have any questions, want to know me better or need to contact me for any other reason, you can do so via {{telegram}}.",
   "softwareList": {
+    "dailyCrack": {
+      "title": "Daily Crack",
+      "description": "Guess the day's password and see how many times it was chosen."
+    },
     "forensicImapDownloader": {
       "title": "Forensic IMAP Downloader",
       "description": "Download emails from IMAP servers in forensic mode."

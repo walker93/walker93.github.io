@@ -1,0 +1,33 @@
+{
+  "title": "Daily Crack",
+  "subtitle": "How many of you use this password?",
+  "description": "Daily Crack è un puzzle quotidiano gratuito in cui si indovina una password reale fra le più diffuse nei data breach, e alla soluzione si scopre quante volte è stata scelta davvero.",
+  "tryNow": "Provalo ora",
+  "content": {
+    "hook": "Daily Crack è un puzzle quotidiano gratuito costruito attorno a una sola idea: la password che ti sembra tua, quasi certamente non lo è. Ogni giorno c'è una password vera da indovinare, presa fra le più diffuse mai finite in un data breach, e a partita conclusa il gioco dice quante volte esattamente è stata scelta.",
+    "lesson": "La maiuscola in testa, le cifre in coda, la chiocciola al posto della «a»: sono le mosse che quasi tutti facciamo per sentirci più al sicuro, ed è la prima cosa che prova chi attacca. Chi risolve «P@ssw0rd» non scopre solo che quella password è comune: scopre che l'intera famiglia «password» — 410 varianti della stessa parola — è stata scelta oltre 132 milioni di volte. La sostituzione che sembrava un'idea personale non ha spostato nessuno in un'altra categoria.",
+    "numbers": "Non ci sono stime né numeri di colore: i conteggi vengono da Have I Been Pwned — Pwned Passwords, con la data dello snapshot dichiarata in pagina. È la differenza fra uno strumento di consapevolezza e un passatempo a tema sicurezza.",
+    "play": "Si gioca in sei tentativi. A ogni tentativo il gioco dice quali caratteri hai preso e, in più, se in quella posizione ci va davvero quel tipo di carattere — maiuscola, minuscola, cifra o simbolo. Quando indovini la parola su cui la password è costruita te lo segnala, così il resto della partita non è più sul vocabolario ma sul modo in cui quella parola è stata storpiata. Ci sono tre suggerimenti e nessuno costa un tentativo.",
+    "reveal": "La schermata finale è il vero contenuto del gioco: il conteggio reale, la classifica delle varianti costruite sulla stessa parola, la regola che genera la password, il tempo di crack stimato e il promemoria che conta più di tutti — se quella password è stata riusata altrove, a nessuno serve romperla. Da lì si arriva a Have I Been Pwned per controllare la propria, senza che la password lasci il browser.",
+    "share": "A partita finita si condivide una griglia in emoji priva di spoiler, con il conteggio del giorno: è il modo in cui il messaggio esce dal gioco e raggiunge chi non ci ha ancora giocato.",
+    "practical": "Gratis, senza registrazione e senza raccolta di dati: progresso e statistiche restano nel browser. Si installa come applicazione e funziona anche offline. Il gioco è in inglese."
+  },
+  "gallery": {
+    "slide1": {
+      "title": "Una partita in corso",
+      "description": "Ogni tentativo dice quali caratteri sono giusti e che tipo di carattere va in ciascuna posizione. Quando la parola di base è al posto giusto il gioco lo segnala: da lì la partita è tutta sul modo in cui è stata storpiata."
+    },
+    "slide2": {
+      "title": "Il momento in cui il gioco dice la sua",
+      "description": "Quante volte quella password è stata scelta davvero, e la classifica di tutte le varianti costruite sulla stessa parola: è qui che si vede che la propria variante non era originale."
+    },
+    "slide3": {
+      "title": "Come si gioca",
+      "description": "Le regole, mostrate alla prima partita: sei tentativi, i due tipi di indizio che ogni casella restituisce e i tre suggerimenti che non costano un tentativo."
+    },
+    "slide4": {
+      "title": "I numeri dietro al gioco",
+      "description": "La pagina About pubblica le statistiche sulle password reali — quanto pesano le cifre in coda, quanto sono rari maiuscole e simboli — dichiarando sempre da quale insieme vengono i numeri."
+    }
+  }
+}
