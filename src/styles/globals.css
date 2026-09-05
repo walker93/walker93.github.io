@@ -41,12 +41,14 @@ h2 {
 }
 .software-card h3 {
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
     color: #0070f3;
     font-size: 1.2rem;
+    line-height: 1;
 }
 .software-card p {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     color: #333;
     font-size: 1rem;
 }

@@ -47,5 +47,19 @@
       "title": "Bulk EML Attachment",
       "description": "Esporta massivamente allegati da mail."
     }
+  },
+  "softwareStatus": {
+    "active": {
+      "label": "Attivo",
+      "hint": "In sviluppo e aggiornato"
+    },
+    "stable": {
+      "label": "Stabile",
+      "hint": "Funzionante, non più aggiornato"
+    },
+    "archived": {
+      "label": "Archiviato",
+      "hint": "Non mantenuto, potrebbe non funzionare"
+    }
   }
 }

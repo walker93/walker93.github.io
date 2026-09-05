@@ -15,61 +15,81 @@ const HomePage = ({ initialTranslations }: any) => {
             icon: faKey,
             title: t('softwareList.dailyCrack.title'),
             description: t('softwareList.dailyCrack.description'),
-            link: language === 'en' ? '/en/daily-crack' : '/daily-crack'
+            link: language === 'en' ? '/en/daily-crack' : '/daily-crack',
+            status_label: t('softwareStatus.active.label'),
+            status_hint: t('softwareStatus.active.hint')
         },
         {
             icon: faCloudDownloadAlt,
             title: t('softwareList.forensicImapDownloader.title'),
             description: t('softwareList.forensicImapDownloader.description'),
-            link: language === 'en' ? '/en/forensic-imap-downloader' : '/forensic-imap-downloader'
+            link: language === 'en' ? '/en/forensic-imap-downloader' : '/forensic-imap-downloader',
+            status_label: t('softwareStatus.active.label'),
+            status_hint: t('softwareStatus.active.hint')
         },
         {
             icon: faBroadcastTower,
             title: t('softwareList.cellMapDesigner.title'),
             description: t('softwareList.cellMapDesigner.description'),
-            link: language === 'en' ? '/en/cell-map-designer' : '/cell-map-designer'
+            link: language === 'en' ? '/en/cell-map-designer' : '/cell-map-designer',
+            status_label: t('softwareStatus.active.label'),
+            status_hint: t('softwareStatus.active.hint')
         },
         {
             icon: faMobileAlt,
             title: t('softwareList.twrpToUfed.title'),
             description: t('softwareList.twrpToUfed.description'),
-            link: language === 'en' ? '/en/twrp-to-ufed' : '/twrp-to-ufed'
+            link: language === 'en' ? '/en/twrp-to-ufed' : '/twrp-to-ufed',
+            status_label: t('softwareStatus.stable.label'),
+            status_hint: t('softwareStatus.stable.hint')
         },
         {
             icon: faEnvelope,
             title: t('softwareList.mailxaminerHtmlReport.title'),
             description: t('softwareList.mailxaminerHtmlReport.description'),
-            link: language === 'en' ? '/en/mailxaminer-html-report' : '/mailxaminer-html-report'
-        },
-        {
-            icon: faInstagram,
-            title: t('softwareList.instagramTakeoutParser.title'),
-            description: t('softwareList.instagramTakeoutParser.description'),
-            link: language === 'en' ? '/en/instagram-takeout-parser' : '/instagram-takeout-parser'
-        },
-        {
-            icon: faWhatsapp,
-            title: t('softwareList.whatsappExportReport.title'),
-            description: t('softwareList.whatsappExportReport.description'),
-            link: undefined
+            link: language === 'en' ? '/en/mailxaminer-html-report' : '/mailxaminer-html-report',
+            status_label: t('softwareStatus.stable.label'),
+            status_hint: t('softwareStatus.stable.hint')
         },
         {
             icon: faFileArchive,
             title: t('softwareList.bulkUnArchiver.title'),
             description: t('softwareList.bulkUnArchiver.description'),
-            link: undefined
+            link: undefined,
+            status_label: t('softwareStatus.stable.label'),
+            status_hint: t('softwareStatus.stable.hint')
         },
         {
             icon: faImage,
             title: t('softwareList.metadataExtractor.title'),
             description: t('softwareList.metadataExtractor.description'),
-            link: undefined
+            link: undefined,
+            status_label: t('softwareStatus.stable.label'),
+            status_hint: t('softwareStatus.stable.hint')
         },
         {
             icon: faPaperclip,
             title: t('softwareList.bulkEmlAttachment.title'),
             description: t('softwareList.bulkEmlAttachment.description'),
-            link: undefined
+            link: undefined,
+            status_label: t('softwareStatus.stable.label'),
+            status_hint: t('softwareStatus.stable.hint')
+        },
+        {
+            icon: faInstagram,
+            title: t('softwareList.instagramTakeoutParser.title'),
+            description: t('softwareList.instagramTakeoutParser.description'),
+            link: language === 'en' ? '/en/instagram-takeout-parser' : '/instagram-takeout-parser',
+            status_label: t('softwareStatus.archived.label'),
+            status_hint: t('softwareStatus.archived.hint')
+        },
+        {
+            icon: faWhatsapp,
+            title: t('softwareList.whatsappExportReport.title'),
+            description: t('softwareList.whatsappExportReport.description'),
+            link: undefined,
+            status_label: t('softwareStatus.archived.label'),
+            status_hint: t('softwareStatus.archived.hint')
         }
     ];
 

@@ -47,5 +47,19 @@
       "title": "Bulk EML Attachment",
       "description": "Massively exports attachments from emails."
     }
+  },
+  "softwareStatus": {
+    "active": {
+      "label": "Active",
+      "hint": "In development and updated"
+    },
+    "stable": {
+      "label": "Stable",
+      "hint": "Functional, no longer updated"
+    },
+    "archived": {
+      "label": "Archived",
+      "hint": "Not maintained, may not work"
+    }
   }
 }
