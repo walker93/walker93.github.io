@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import { useRouter } from 'next/router';
 import LightboxGallery from '../components/LightboxGallery';
 import HeadComponent from '../components/HeadComponent';
@@ -65,3 +66,5 @@ const CellMapDesigner = () => {
 };
 
 export default CellMapDesigner;
+
+export const getStaticProps = staticTranslations('it', []);

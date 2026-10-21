@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import LightboxGallery from '../components/LightboxGallery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -56,3 +57,5 @@ const ForensicImapDownloader = () => {
 };
 
 export default ForensicImapDownloader;
+
+export const getStaticProps = staticTranslations('it', ['forensic-imap-downloader']);

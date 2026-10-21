@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import HeadComponent from "../components/HeadComponent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
@@ -92,3 +93,5 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
+export const getStaticProps = staticTranslations('it', ['privacy-policy']);

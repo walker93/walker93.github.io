@@ -9,8 +9,18 @@
 
 <url>
   <loc>https://alexcortinovis.tech/</loc>
-  <lastmod>2026-01-06T18:27:51+00:00</lastmod>
+  <lastmod>2026-10-21T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://alexcortinovis.tech/about</loc>
+  <lastmod>2026-10-21T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://alexcortinovis.tech/daily-crack</loc>
+  <lastmod>2026-10-21T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alexcortinovis.tech/forensic-imap-downloader</loc>

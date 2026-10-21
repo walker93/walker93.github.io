@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import LightboxGallery from '../components/LightboxGallery';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -55,3 +56,5 @@ const DailyCrack = () => {
 };
 
 export default DailyCrack;
+
+export const getStaticProps = staticTranslations('it', ['daily-crack']);

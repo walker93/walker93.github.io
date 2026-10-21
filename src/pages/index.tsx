@@ -1,149 +1,161 @@
 import React from 'react';
-import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt, faEnvelope, faFileArchive, faKey } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faPaperclip, faCloudDownloadAlt, faBroadcastTower, faMobileAlt, faEnvelope, faFileArchive } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import SoftwareCard from '../components/software-card';
+import SoftwareCard, { StatusPill } from '../components/software-card';
 import HeadComponent from '../components/HeadComponent';
 import { useTranslation } from '../hooks/useTranslation';
 import { useLanguageContext } from '../context/LanguageContext';
+import { staticTranslations } from '../utils/staticTranslations';
 
-const HomePage = ({ initialTranslations }: any) => {
-    const { t } = useTranslation('home', initialTranslations?.home);
+const HomePage = () => {
+    const { t } = useTranslation('home');
     const { language } = useLanguageContext();
+    const prefix = language === 'en' ? '/en' : '';
 
+    const status = (key: 'active' | 'stable' | 'archived') => ({
+        status: key,
+        status_label: t(`softwareStatus.${key}.label`),
+        status_hint: t(`softwareStatus.${key}.hint`)
+    });
+
+    // Daily Crack non è qui: ha il suo blocco in evidenza. Ordine: Attivi, Stabili, Archiviati
     const softwareList = [
-        {
-            icon: faKey,
-            title: t('softwareList.dailyCrack.title'),
-            description: t('softwareList.dailyCrack.description'),
-            link: language === 'en' ? '/en/daily-crack' : '/daily-crack',
-            status_label: t('softwareStatus.active.label'),
-            status_hint: t('softwareStatus.active.hint')
-        },
         {
             icon: faCloudDownloadAlt,
             title: t('softwareList.forensicImapDownloader.title'),
             description: t('softwareList.forensicImapDownloader.description'),
-            link: language === 'en' ? '/en/forensic-imap-downloader' : '/forensic-imap-downloader',
-            status_label: t('softwareStatus.active.label'),
-            status_hint: t('softwareStatus.active.hint')
+            link: `${prefix}/forensic-imap-downloader`,
+            ...status('active')
         },
         {
             icon: faBroadcastTower,
             title: t('softwareList.cellMapDesigner.title'),
             description: t('softwareList.cellMapDesigner.description'),
-            link: language === 'en' ? '/en/cell-map-designer' : '/cell-map-designer',
-            status_label: t('softwareStatus.active.label'),
-            status_hint: t('softwareStatus.active.hint')
+            link: `${prefix}/cell-map-designer`,
+            ...status('active')
         },
         {
             icon: faMobileAlt,
             title: t('softwareList.twrpToUfed.title'),
             description: t('softwareList.twrpToUfed.description'),
-            link: language === 'en' ? '/en/twrp-to-ufed' : '/twrp-to-ufed',
-            status_label: t('softwareStatus.stable.label'),
-            status_hint: t('softwareStatus.stable.hint')
+            link: `${prefix}/twrp-to-ufed`,
+            ...status('stable')
         },
         {
             icon: faEnvelope,
             title: t('softwareList.mailxaminerHtmlReport.title'),
             description: t('softwareList.mailxaminerHtmlReport.description'),
-            link: language === 'en' ? '/en/mailxaminer-html-report' : '/mailxaminer-html-report',
-            status_label: t('softwareStatus.stable.label'),
-            status_hint: t('softwareStatus.stable.hint')
+            link: `${prefix}/mailxaminer-html-report`,
+            ...status('stable')
         },
         {
             icon: faFileArchive,
             title: t('softwareList.bulkUnArchiver.title'),
             description: t('softwareList.bulkUnArchiver.description'),
             link: undefined,
-            status_label: t('softwareStatus.stable.label'),
-            status_hint: t('softwareStatus.stable.hint')
+            ...status('stable')
         },
         {
             icon: faImage,
             title: t('softwareList.metadataExtractor.title'),
             description: t('softwareList.metadataExtractor.description'),
             link: undefined,
-            status_label: t('softwareStatus.stable.label'),
-            status_hint: t('softwareStatus.stable.hint')
+            ...status('stable')
         },
         {
             icon: faPaperclip,
             title: t('softwareList.bulkEmlAttachment.title'),
             description: t('softwareList.bulkEmlAttachment.description'),
             link: undefined,
-            status_label: t('softwareStatus.stable.label'),
-            status_hint: t('softwareStatus.stable.hint')
+            ...status('stable')
         },
         {
             icon: faInstagram,
             title: t('softwareList.instagramTakeoutParser.title'),
             description: t('softwareList.instagramTakeoutParser.description'),
-            link: language === 'en' ? '/en/instagram-takeout-parser' : '/instagram-takeout-parser',
-            status_label: t('softwareStatus.archived.label'),
-            status_hint: t('softwareStatus.archived.hint')
+            link: `${prefix}/instagram-takeout-parser`,
+            ...status('archived')
         },
         {
             icon: faWhatsapp,
             title: t('softwareList.whatsappExportReport.title'),
             description: t('softwareList.whatsappExportReport.description'),
             link: undefined,
-            status_label: t('softwareStatus.archived.label'),
-            status_hint: t('softwareStatus.archived.hint')
+            ...status('archived')
         }
     ];
 
-    const seoData = language === 'en' ? {
-        title: 'Alex Cortinovis - Expert in Digital Forensic and Data Recovery, Independent Developer',
-        description: 'Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis.',
-        url: 'https://alexcortinovis.tech/en/',
-    } : {
-        title: 'Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente',
-        description: 'Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l\'analisi forense digitale.',
-        url: 'https://alexcortinovis.tech/',
-    };
+    // Solo il dato sulle ore di docenza ha un dettaglio (tooltip)
+    const stats = [{ key: 'devices' }, { key: 'years' }, { key: 'teaching', hint: true }];
 
     return (
         <div>
-            <HeadComponent 
-                title={seoData.title}
-                description={seoData.description}
-                url={seoData.url}
-                image="/og_image.png" 
+            <HeadComponent
+                title={t('seo.title')}
+                description={t('seo.description')}
+                url={language === 'en' ? 'https://alexcortinovis.tech/en/' : 'https://alexcortinovis.tech/'}
+                image="/og_image.png"
             />
             <main className='main-section' style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0' }}>
-                <section style={{ marginBottom: '2rem' }}>
+                <section className="hero">
+                    <h1>{t('hero.title')}</h1>
                     <p>
-                        {t('experience')
-                            .replace('{{forenseStudio}}', `<a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">Studio di Ingegneria Informatica Forense</a>`)
-                            .replace('{{role}}', `<i>${t('roleTitle')}</i>`) && (
-                            <>
-                                {t('intro')}<br />
-                                {language === 'en' ? 'For 10 years I have been working at the ' : 'Da 10 anni lavoro presso lo '}
-                                <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">
-                                    {language === 'en' ? 'Forensic Engineering Studio' : 'Studio di Ingegneria Informatica Forense'}
-                                </a>
-                                {language === 'en' ? ' of Dr. Ing. Michele Vitiello in Brescia, where I perform the role of ' : ' del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di '}
-                                <i>{t('roleTitle')}</i>.
-                                <br />
-                                {t('disclaimer')}
-                            </>
-                        )}
+                        {t('hero.leadBefore')}
+                        <a href="http://michelevitiello.it/" target="_blank" rel="noopener noreferrer">{t('hero.studioName')}</a>
+                        {t('hero.leadAfter')}
                     </p>
+                    <div className="hero-actions">
+                        <a className="button" href={`${prefix}/about`}>{t('hero.ctaAbout')}</a>
+                        <a className="button button-outline" href="#software">{t('hero.ctaSoftware')}</a>
+                    </div>
                 </section>
-                <section style={{ marginBottom: '2rem' }}>
+
+                <section className="stats">
+                    {stats.map(({ key, hint }) => (
+                        <div className="stat" key={key} title={hint ? t(`stats.${key}.hint`) : undefined}>
+                            <span className="stat-value">{t(`stats.${key}.value`)}</span>
+                            <span className="stat-label">{t(`stats.${key}.label`)}</span>
+                        </div>
+                    ))}
+                </section>
+
+                <section className="featured">
+                    <div className="featured-body">
+                        <div className="featured-pills">
+                            <span className="status-pill status-featured">{t('featured.badge')}</span>
+                            <StatusPill status="active" label={t('softwareStatus.active.label')} hint={t('softwareStatus.active.hint')} />
+                        </div>
+                        <h2>{t('softwareList.dailyCrack.title')}</h2>
+                        <p className="featured-subtitle">{t('featured.subtitle')}</p>
+                        <p>{t('featured.description')}</p>
+                        <div className="featured-actions">
+                            <a className="button" href="https://dailycrack.app" target="_blank" rel="noopener noreferrer">{t('featured.play')}</a>
+                            <a href={`${prefix}/daily-crack`}>{t('featured.details')}</a>
+                        </div>
+                    </div>
+                    <a className="featured-media" href={`${prefix}/daily-crack`}>
+                        <img src="/images/Daily-Crack/featured.webp" alt={t('featured.imageAlt')} width={640} height={512} loading="lazy" />
+                    </a>
+                </section>
+
+                <section id="software">
                     <h2>{t('softwareTitle')}</h2>
                     <div className="software-grid">
                         {softwareList.map((sw, idx) => (
                             <SoftwareCard key={idx} {...sw} />
                         ))}
                     </div>
+                    <p className="section-more">
+                        <a href="https://github.com/walker93" target="_blank" rel="noopener noreferrer">{t('allRepos')}</a>
+                    </p>
                 </section>
+
                 <section>
                     <h2>{t('contactTitle')}</h2>
-                    <p>
-                        {language === 'en' ? 'If you have any questions, want to know me better or need to contact me for any other reason, you can do so via ' : 'Se hai dubbi, vuoi conoscermi meglio o necessiti di contattarmi per qualsiasi altra ragione, puoi farlo tramite '}
-                        <a href="https://t.me/AlexCortinovis" target="_blank" rel="noopener noreferrer">Telegram</a>.
+                    <p style={{ textAlign: 'center' }}>
+                        {t('contactBefore')}
+                        <a href="https://t.me/AlexCortinovis" target="_blank" rel="noopener noreferrer">Telegram</a>
+                        {t('contactAfter')}
                     </p>
                 </section>
             </main>
@@ -151,40 +163,6 @@ const HomePage = ({ initialTranslations }: any) => {
     );
 };
 
-export async function getStaticProps(context: any) {
-    const path_module = require('path');
-    const fs_module = require('fs');
-    
-    // Homepage italiana (lingua di default)
-    const language = 'it';
-    
-    try {
-        // Carica le traduzioni build-time
-        const translationsPath = path_module.join(process.cwd(), 'public', 'locales', language, 'home.json');
-        const commonPath = path_module.join(process.cwd(), 'public', 'locales', language, 'common.json');
-        
-        const homeTranslations = JSON.parse(fs_module.readFileSync(translationsPath, 'utf-8'));
-        const commonTranslations = JSON.parse(fs_module.readFileSync(commonPath, 'utf-8'));
-        
-        return {
-            props: {
-                initialTranslations: {
-                    home: homeTranslations,
-                    common: commonTranslations
-                }
-            }
-        };
-    } catch (error) {
-        console.error('Failed to load translations:', error);
-        return {
-            props: {
-                initialTranslations: {
-                    home: {},
-                    common: {}
-                }
-            }
-        };
-    }
-}
+export const getStaticProps = staticTranslations('it', ['home']);
 
 export default HomePage;

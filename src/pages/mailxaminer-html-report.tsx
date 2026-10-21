@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import LightboxGallery from '../components/LightboxGallery';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,3 +53,5 @@ const MailXaminerHtmlReport = () => {
 };
 
 export default MailXaminerHtmlReport;
+
+export const getStaticProps = staticTranslations('it', ['mailxaminer-html-report']);

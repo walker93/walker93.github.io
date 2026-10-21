@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import LightboxGallery from '../components/LightboxGallery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -52,3 +53,5 @@ const InstagramTakeoutParser = () => {
 };
 
 export default InstagramTakeoutParser;
+
+export const getStaticProps = staticTranslations('it', ['instagram-takeout-parser']);

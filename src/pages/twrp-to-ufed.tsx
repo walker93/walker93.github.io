@@ -1,3 +1,4 @@
+import { staticTranslations } from '../utils/staticTranslations';
 import LightboxGallery from '../components/LightboxGallery';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -51,3 +52,5 @@ const TwrpToUfed = () => {
 };
 
 export default TwrpToUfed;
+
+export const getStaticProps = staticTranslations('it', ['twrp-to-ufed']);

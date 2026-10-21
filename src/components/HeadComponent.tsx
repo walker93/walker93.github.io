@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useLanguageContext } from '../context/LanguageContext';
 
 type Props = {
@@ -10,11 +11,13 @@ type Props = {
 
 const HeadComponent = ({ title, description, url, image}: Props) => {
     const { language } = useLanguageContext();
+    const router = useRouter();
 
     // Genera hreflang links per SEO
     const generateAlternateLinks = () => {
         const baseUrl = 'https://alexcortinovis.tech';
-        const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+        // pathname invece di window.location: così gli hreflang sono corretti anche nell'HTML statico
+        const currentPath = router.pathname;
         
         // Rimuovi il prefisso /en per ottenere il percorso base
         const basePath = currentPath.replace(/^\/en/, '') || '/';

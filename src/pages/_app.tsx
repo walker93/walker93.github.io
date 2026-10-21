@@ -9,6 +9,7 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
 import { LanguageProvider, useLanguageContext } from '../context/LanguageContext';
 import { useRouter } from 'next/router';
+import { PageTranslationsContext } from '../hooks/useTranslation';
 
 function MyAppContent({ Component, pageProps }) {
   const router = useRouter();
@@ -44,13 +45,13 @@ function MyAppContent({ Component, pageProps }) {
   }, [router.asPath]);
 
   return (
-    <>
+    <PageTranslationsContext.Provider value={pageProps.initialTranslations}>
       <Header />
       <GoogleAnalytics gaId="G-1299F55DSC" />
       <N8nChatComponent />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </PageTranslationsContext.Provider>
   );
 }
 

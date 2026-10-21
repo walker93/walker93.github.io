@@ -1,11 +1,44 @@
 {
-  "intro": "Benvenuto sul mio sito, sono laureato in Sicurezza dei sistemi e delle reti informatiche.",
-  "experience": "Da 10 anni lavoro presso lo {{forenseStudio}} del Dott. Ing. Michele Vitiello a Brescia, dove svolgo la mansione di {{role}}.",
-  "roleTitle": "Digital Forensics and Data Recovery Expert",
-  "disclaimer": "In questo sito puoi visionare e scaricare alcuni dei tool che ho sviluppato completamente nella filosofia Open Source.",
+  "seo": {
+    "title": "Alex Cortinovis - Esperto in Digital Forensic e Data Recovery, Sviluppatore indipendente",
+    "description": "Sito ufficiale di Alex Cortinovis, esperto in Digital Forensic e Data Recovery, nonché sviluppatore indipendente di software per l'analisi forense digitale."
+  },
+  "hero": {
+    "title": "Digital forensics, recupero dati e strumenti open source per l'analisi forense.",
+    "leadBefore": "Dal 2016 acquisisco e analizzo dispositivi digitali presso lo ",
+    "studioName": "Studio di Ingegneria Informatica Forense",
+    "leadAfter": " dell'Ing. Michele Vitiello a Brescia, recupero dati da supporti danneggiati e insegno digital forensics. Qui trovi alcuni degli strumenti che ho sviluppato, tutti open source.",
+    "ctaAbout": "Chi sono",
+    "ctaSoftware": "Vedi i software"
+  },
+  "stats": {
+    "devices": {
+      "value": "~300",
+      "label": "dispositivi analizzati ogni anno"
+    },
+    "years": {
+      "value": "10 anni",
+      "label": "in uno studio di informatica forense"
+    },
+    "teaching": {
+      "value": "100+ ore",
+      "label": "di docenza in digital forensics",
+      "hint": "≈70 ore erogate + corso CIFI da 40 ore"
+    }
+  },
+  "featured": {
+    "badge": "In evidenza",
+    "subtitle": "How many of you use this password?",
+    "description": "Ogni giorno una password reale tra le più diffuse nei data breach: indovinala in stile Wordle e scopri quante persone la usano.",
+    "play": "Gioca su dailycrack.app",
+    "details": "Scheda del progetto →",
+    "imageAlt": "Una partita di Daily Crack in corso"
+  },
   "softwareTitle": "Software sviluppati",
+  "allRepos": "Tutti i repository su GitHub →",
   "contactTitle": "Contatto",
-  "contactDescription": "Se hai dubbi, vuoi conoscermi meglio o necessiti di contattarmi per qualsiasi altra ragione, puoi farlo tramite {{telegram}}.",
+  "contactBefore": "Per domande sui software o per qualsiasi altra ragione puoi scrivermi su ",
+  "contactAfter": ".",
   "softwareList": {
     "dailyCrack": {
       "title": "Daily Crack",
@@ -32,7 +65,7 @@
       "description": "Report HTML di tutti i contenuti Instagram."
     },
     "whatsappExportReport": {
-      "title": "Whatsapp Export Report",
+      "title": "WhatsApp Export Report",
       "description": "Genera report HTML per ogni chat Whatsapp."
     },
     "bulkUnArchiver": {
@@ -46,6 +79,20 @@
     "bulkEmlAttachment": {
       "title": "Bulk EML Attachment",
       "description": "Esporta massivamente allegati da mail."
+    }
+  },
+  "softwareStatus": {
+    "active": {
+      "label": "Attivo",
+      "hint": "In sviluppo e aggiornato"
+    },
+    "stable": {
+      "label": "Stabile",
+      "hint": "Funzionante, non più aggiornato"
+    },
+    "archived": {
+      "label": "Archiviato",
+      "hint": "Non mantenuto, potrebbe non funzionare"
     }
   }
 }

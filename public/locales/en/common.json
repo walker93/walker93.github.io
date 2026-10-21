@@ -3,14 +3,18 @@
     "title": "Alex Cortinovis",
     "subtitle": "Expert in Digital Forensic and Data Recovery, Independent Developer",
     "home": "Home",
+    "about": "About",
     "software": "Software",
     "privacyPolicy": "Privacy Policy",
     "linkedIn": "LinkedIn",
-    "gitHub": "GitHub"
+    "gitHub": "GitHub",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "footer": {
+    "about": "About",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© 2025 Alex Cortinovis"
+    "copyright": "© 2026 Alex Cortinovis"
   },
   "n8n": {
     "title": "Hello 👋",

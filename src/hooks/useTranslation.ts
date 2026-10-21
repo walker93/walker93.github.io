@@ -1,37 +1,36 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 type Translations = {
   [key: string]: any;
 };
 
+// Traduzioni caricate a build time da getStaticProps, indicizzate per namespace (vedi _app.tsx)
+export const PageTranslationsContext = createContext<{ [namespace: string]: Translations } | undefined>(undefined);
+
 let translationCache: { [key: string]: Translations } = {};
 
 export const useTranslation = (namespace: string = 'common', initialTranslations?: Translations) => {
   const router = useRouter();
-  const [translations, setTranslations] = useState<Translations>(initialTranslations || {});
-  const [isLoading, setIsLoading] = useState(!initialTranslations);
+  const pageTranslations = useContext(PageTranslationsContext);
+  const [fetchedTranslations, setFetchedTranslations] = useState<Translations | null>(null);
 
-  // Estrae la lingua dalla URL
-  const getLanguage = (): 'it' | 'en' => {
-    if (typeof window === 'undefined') return 'it';
-    
-    const path = router.asPath;
-    if (path.startsWith('/en')) {
-      return 'en';
-    }
-    return 'it';
-  };
+  // Estrae la lingua dalla URL (pathname è disponibile anche durante la build statica)
+  const language: 'it' | 'en' = router.pathname.startsWith('/en') ? 'en' : 'it';
 
-  const language = getLanguage();
+  const preloaded = initialTranslations || pageTranslations?.[namespace];
+  const translations = preloaded || fetchedTranslations || {};
+  const isLoading = !preloaded && !fetchedTranslations;
 
   useEffect(() => {
+    // Le traduzioni sono già nell'HTML statico: niente fetch
+    if (preloaded) return;
+
     const cacheKey = `${language}-${namespace}`;
 
     // Se è già in cache, usalo
     if (translationCache[cacheKey]) {
-      setTranslations(translationCache[cacheKey]);
-      setIsLoading(false);
+      setFetchedTranslations(translationCache[cacheKey]);
       return;
     }
 
@@ -44,7 +43,7 @@ export const useTranslation = (namespace: string = 'common', initialTranslations
         }
         const data = await response.json();
         translationCache[cacheKey] = data;
-        setTranslations(data);
+        setFetchedTranslations(data);
       } catch (error) {
         console.warn(`Could not load translations for ${language}/${namespace}, falling back to Italian`);
         // Fallback all'italiano
@@ -53,18 +52,16 @@ export const useTranslation = (namespace: string = 'common', initialTranslations
           if (fallbackResponse.ok) {
             const fallbackData = await fallbackResponse.json();
             translationCache[cacheKey] = fallbackData;
-            setTranslations(fallbackData);
+            setFetchedTranslations(fallbackData);
           }
         } catch (fallbackError) {
           console.error(`Failed to load Italian fallback for ${namespace}`, fallbackError);
         }
-      } finally {
-        setIsLoading(false);
       }
     };
 
     loadTranslations();
-  }, [language, namespace]);
+  }, [language, namespace, preloaded]);
 
   return {
     t: (key: string, fallback: string = ''): string => {

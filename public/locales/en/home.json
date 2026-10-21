@@ -1,11 +1,44 @@
 {
-  "intro": "Welcome to my website. I'm a graduate in Security of Information Systems and Networks.",
-  "experience": "For 10 years I have been working at the {{forenseStudio}} of Dr. Ing. Michele Vitiello in Brescia, where I perform the role of {{role}}.",
-  "roleTitle": "Digital Forensics and Data Recovery Expert",
-  "disclaimer": "On this website you can view and download some of the tools I have developed completely in the Open Source philosophy.",
+  "seo": {
+    "title": "Alex Cortinovis - Expert in Digital Forensic and Data Recovery, Independent Developer",
+    "description": "Official website of Alex Cortinovis, expert in Digital Forensic and Data Recovery, and independent developer of software for digital forensics analysis."
+  },
+  "hero": {
+    "title": "Digital forensics, data recovery and open source tools for forensic analysis.",
+    "leadBefore": "Since 2016 I have been acquiring and analysing digital devices at the ",
+    "studioName": "Forensic Computer Engineering Studio",
+    "leadAfter": " of Michele Vitiello in Brescia, recovering data from damaged media and teaching digital forensics. Here you will find some of the tools I have built, all open source.",
+    "ctaAbout": "About me",
+    "ctaSoftware": "See the software"
+  },
+  "stats": {
+    "devices": {
+      "value": "~300",
+      "label": "devices analysed every year"
+    },
+    "years": {
+      "value": "10 years",
+      "label": "in a digital forensics firm"
+    },
+    "teaching": {
+      "value": "100+ hours",
+      "label": "of digital forensics teaching",
+      "hint": "≈70 hours delivered + 40-hour CIFI course"
+    }
+  },
+  "featured": {
+    "badge": "Featured",
+    "subtitle": "How many of you use this password?",
+    "description": "Every day, a real password among the most common in data breaches: guess it Wordle-style and find out how many people use it.",
+    "play": "Play on dailycrack.app",
+    "details": "Project page →",
+    "imageAlt": "A Daily Crack game in progress"
+  },
   "softwareTitle": "Developed Software",
+  "allRepos": "All repositories on GitHub →",
   "contactTitle": "Contact",
-  "contactDescription": "If you have any questions, want to know me better or need to contact me for any other reason, you can do so via {{telegram}}.",
+  "contactBefore": "For questions about the software or anything else, you can message me on ",
+  "contactAfter": ".",
   "softwareList": {
     "dailyCrack": {
       "title": "Daily Crack",
@@ -32,7 +65,7 @@
       "description": "HTML report of all Instagram content."
     },
     "whatsappExportReport": {
-      "title": "Whatsapp Export Report",
+      "title": "WhatsApp Export Report",
       "description": "Generates HTML report for each WhatsApp chat."
     },
     "bulkUnArchiver": {

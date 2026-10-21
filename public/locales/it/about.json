@@ -1,0 +1,146 @@
+{
+  "seo": {
+    "title": "Chi sono - Alex Cortinovis",
+    "description": "Alex Cortinovis: digital forensics e recupero dati dal 2016 presso lo Studio di Ingegneria Informatica Forense di Brescia. Docenze, percorso, certificazioni e strumenti open source."
+  },
+  "jobTitle": "Esperto in Digital Forensics e Data Recovery",
+  "title": "Chi sono",
+  "photoAlt": "Alex Cortinovis",
+  "intro": {
+    "p1Before": "Mi occupo di digital forensics e recupero dati dal 2016, presso lo ",
+    "studioName": "Studio di Ingegneria Informatica Forense",
+    "p1After": " dell'Ing. Michele Vitiello a Brescia. Ogni anno passano dal mio banco circa 300 dispositivi — smartphone, computer, supporti di memoria e account cloud — da acquisire e analizzare, e una trentina di supporti danneggiati da cui recuperare i dati.",
+    "p2": "Lavorare su entrambi i fronti mi permette di seguire anche i casi in cui l'evidenza sta su un supporto compromesso: dal chip-off su memorie NAND in camera bianca fino alla relazione tecnica."
+  },
+  "what": {
+    "title": "Cosa faccio",
+    "items": [
+      {
+        "title": "Analisi forense",
+        "text": "Acquisizione e analisi di dispositivi mobile, computer e fonti cloud. Casi soprattutto civili (Business Email Compromise, analisi di log, concorrenza sleale, contenzioso del lavoro) e penali con componente tecnica. Opero come ausiliario del consulente tecnico e dal 2025 sono co-firmatario delle relazioni."
+      },
+      {
+        "title": "Tabulati e celle telefoniche",
+        "text": "Sono il referente dello studio per l'analisi dei tabulati e delle coperture di cella, con SecurCube PhoneLog e con {{cellMapDesigner}}, il software cartografico che ho sviluppato per questo."
+      },
+      {
+        "title": "Recupero dati",
+        "text": "Hard disk, flash, SD e microSD con danno logico, fisico o elettronico; chip-off su NAND, ricostruzione della FTL, PC-3000 Express e PC-3000 Flash."
+      },
+      {
+        "title": "Audio forensics",
+        "text": "Restauro e miglioramento di registrazioni, trascrizione, comparazione e identificazione del parlante."
+      },
+      {
+        "title": "Cyber security",
+        "text": "Penetration testing, vulnerability assessment, incident response, analisi di malware, spyware e attacchi MITM."
+      }
+    ]
+  },
+  "teaching": {
+    "title": "Docenza",
+    "text": "Insegno digital forensics dal 2017: corsi per privati e Forze dell'Ordine allo studio, e dal 2026 il corso di preparazione alla certificazione CIFI (IISFA) per Slash School — 40 ore in 20 lezioni, che ho progettato da zero.",
+    "talksTitle": "Interventi recenti",
+    "enBadge": "EN",
+    "enBadgeHint": "In inglese",
+    "talks": [
+      {
+        "year": "2026",
+        "org": "Agenfor International, progetto europeo Phygital-OC",
+        "title": "Modulo 6 “Digital Forensics and Location Intelligence”",
+        "en": true
+      },
+      {
+        "year": "2026",
+        "org": "Comando Polizia Locale di Venezia",
+        "title": "“AI nella Polizia Locale: casi d'uso, strumenti e impatti operativi”",
+        "en": false
+      },
+      {
+        "year": "2025",
+        "org": "Agenfor International",
+        "title": "“Source Project – Practical Realities of Digital Forensics”",
+        "en": true
+      },
+      {
+        "year": "2025",
+        "org": "Agenfor International",
+        "title": "“Transfer of Digital Evidence and Forensic Analysis”",
+        "en": true
+      }
+    ]
+  },
+  "openSource": {
+    "title": "Strumenti open source",
+    "text": "Sviluppo strumenti per coprire i buchi dei software commerciali che uso ogni giorno: {{repos}} su GitHub, tra cui Forensic IMAP Downloader, Cell Map Designer e TWRP to UFED.",
+    "repos": "19 repository pubblici",
+    "link": "Vai ai software →"
+  },
+  "timeline": {
+    "title": "Percorso",
+    "items": [
+      {
+        "year": "2026",
+        "events": [
+          "Certificazione CIFI (IISFA)",
+          "Docente per Slash School",
+          "Lancio di Daily Crack"
+        ]
+      },
+      {
+        "year": "2025",
+        "events": [
+          "Co-firmatario delle relazioni tecniche",
+          "Prime docenze internazionali con Agenfor"
+        ]
+      },
+      {
+        "year": "2018",
+        "events": [
+          "PC-3000 Flash Data Recovery Expert Training, ACELab (Praga)"
+        ]
+      },
+      {
+        "year": "2017",
+        "events": [
+          "Laurea in Sicurezza dei Sistemi e delle Reti Informatiche, Università degli Studi di Milano",
+          "Corso Digital Forensics & Ethical Hacking, Ordine degli Ingegneri di Brescia"
+        ]
+      },
+      {
+        "year": "2016",
+        "events": [
+          "Inizio allo Studio di Ingegneria Informatica Forense e in Recupero Dati Brescia"
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certificazioni e associazioni",
+    "items": [
+      "CIFI — Certified Information Forensics Investigator (IISFA), luglio 2026",
+      "Socio IISFA — Italian Chapter",
+      "PC-3000 Flash Data Recovery Expert — ACELab"
+    ]
+  },
+  "tools": {
+    "title": "Strumenti che uso",
+    "items": [
+      "Cellebrite UFED",
+      "Magnet Axiom",
+      "Graykey",
+      "X-Ways",
+      "Oxygen Forensic Detective",
+      "PC-3000",
+      "SecurCube PhoneLog",
+      "iZotope RX"
+    ]
+  },
+  "outside": {
+    "title": "Fuori dal lavoro",
+    "text": "Montagna e trekking, elettronica, e per anni beta tester e moderatore della community di Disa, app Android con oltre un milione di download."
+  },
+  "contacts": {
+    "title": "Contatti"
+  }
+}

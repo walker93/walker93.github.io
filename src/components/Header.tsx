@@ -46,6 +46,7 @@ const Header = () => {
 
     // Determina la lingua direttamente dal percorso per evitare problemi di sincronizzazione
     const isEnglish = router.asPath.startsWith('/en');
+    const currentPage = router.pathname.replace(/^\/en/, '') || '/';
 
     const handleLanguageChange = (selectedLang: string) => {
         setLangMenuOpen(false);
@@ -67,8 +68,9 @@ const Header = () => {
 
     return (
         <header style={{ maxWidth: 1080, margin: '0 auto', padding: '1rem 0 0 0', width: '100%' }}>
-            <h1 style={{ textAlign: 'center', margin: 0 }}>{t('header.title')}</h1>
-            <h2 style={{ textAlign: 'center', fontWeight: 400, fontSize: '1.1rem', lineHeight: 1.5, marginBottom: '10px', color: '#757575' }}>{t('header.subtitle')}</h2>
+            {/* Nome e sottotitolo non sono heading: l'h1 di ogni pagina sta nel suo contenuto */}
+            <p className="site-title">{t('header.title')}</p>
+            <p className="site-subtitle">{t('header.subtitle')}</p>
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#222', padding: '1rem', position: 'relative' }} className={isMobileMenuOpen ? 'menu-open' : ''}>
                 {/* Hamburger Button - visible only on mobile */}
                 <button
@@ -98,7 +100,8 @@ const Header = () => {
                     className="nav-main"
                     style={{ display: isMobile && !isMobileMenuOpen ? 'none' : 'flex', gap: '1.5rem', alignItems: 'baseline', listStyle: 'none', margin: 0, padding: 0, color: '#fff' }}
                 >
-                    <li><a href={isEnglish ? '/en' : '/'}>{t('header.home')}</a></li>
+                    <li><a href={isEnglish ? '/en' : '/'} aria-current={currentPage === '/' ? 'page' : undefined}>{t('header.home')}</a></li>
+                    <li><a href={isEnglish ? '/en/about' : '/about'} aria-current={currentPage === '/about' ? 'page' : undefined}>{t('header.about')}</a></li>
                     <li
                         style={{ position: 'relative' }}
                         onMouseEnter={isMobile ? undefined : (e => {
@@ -149,7 +152,7 @@ const Header = () => {
                 >
                     
                     <li>
-                        <a href="https://www.linkedin.com/in/alex-cortinovis-673590b6/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/alexcortinovis" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '1.7rem', color: '#fff' }} title={t('header.linkedIn')} />
                         </a>
                     </li>

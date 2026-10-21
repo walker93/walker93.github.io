@@ -12,7 +12,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const router = useRouter();
-  const [language, setLanguageState] = useState<Language>('it');
+  // pathname è noto anche durante la build statica, così l'HTML delle pagine /en esce già in inglese
+  const [language, setLanguageState] = useState<Language>(router.pathname.startsWith('/en') ? 'en' : 'it');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -29,8 +30,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       const browserLocale = typeof navigator !== 'undefined' ? navigator.language : 'en';
       const browserLanguage = browserLocale?.split('-')[0]?.toLowerCase();
 
-      if (browserLanguage !== 'it' && path !== '/en') {
-        router.replace('/en');
+      // Porta alla versione inglese della stessa pagina, non alla home inglese
+      if (browserLanguage !== 'it') {
+        router.replace(path === '/' ? '/en' : `/en${path}`);
       }
     }
   }, [router.isReady, router.asPath]);

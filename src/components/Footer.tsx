@@ -9,6 +9,7 @@ const Footer = () => {
     return (
         <footer style={{maxWidth: 1080, background: '#333', color: '#fff', textAlign: 'center', padding: '1.2rem 0', marginTop: '2rem', margin: '0 auto' }}>
             
+            <a href={language === 'en' ? '/en/about' : '/about'} style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500, marginRight: '1.2rem' }}>{t('footer.about')}</a>
             <a href={language === 'en' ? '/en/privacy-policy' : '/privacy-policy'} style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500 }}>{t('footer.privacyPolicy')}</a>
             <br />
             <span style={{ fontSize: '0.95rem', opacity: 0.7 }}>
